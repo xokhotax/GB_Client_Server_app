@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; configuration.title = "Войти"; ObjectID = "BdY-lh-Cz8"; */
+"BdY-lh-Cz8.configuration.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BdY-lh-Cz8"; */
+"BdY-lh-Cz8.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Введите свой пароль"; ObjectID = "CXN-bN-AAt"; */
+"CXN-bN-AAt.placeholder" = "Введите свой пароль";
+
+/* Class = "UILabel"; text = "Пароль"; ObjectID = "doX-R5-utu"; */
+"doX-R5-utu.text" = "Пароль";
+
+/* Class = "UILabel"; text = "Добро пожаловать!"; ObjectID = "g8C-rl-T47"; */
+"g8C-rl-T47.text" = "Добро пожаловать!";
+
+/* Class = "UILabel"; text = " Логин"; ObjectID = "w3B-yK-RT1"; */
+"w3B-yK-RT1.text" = " Логин";
+
+/* Class = "UITextField"; placeholder = "Введите свой логин"; ObjectID = "zXf-ww-fOq"; */
+"zXf-ww-fOq.placeholder" = "Введите свой логин";

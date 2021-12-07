@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VK Sans.ttf">
+            <string>VKSansDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikeController" customModule="VKInterface" customModuleProvider="target">
+            <connections>
+                <outlet property="counterLabel" destination="SUj-90-abs" id="aHg-Wg-uwU"/>
+                <outlet property="dislikeButton" destination="8pf-kh-rF7" id="BNh-h8-WFu"/>
+                <outlet property="likeButton" destination="WON-Dl-mp3" id="slO-9i-ZAT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pf-kh-rF7">
+                    <rect key="frame" x="16" y="428" width="79.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ijE-YN-8tI"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="hand.thumbsdown" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="pressDislikeButton:" destination="-1" eventType="touchUpInside" id="8pg-pG-pwV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WON-Dl-mp3">
+                    <rect key="frame" x="372.5" y="428" width="25.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BqN-bW-BAm"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="hand.thumbsup" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="pressLikeButton:" destination="-1" eventType="touchUpInside" id="caP-GC-cGj"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUj-90-abs">
+                    <rect key="frame" x="202" y="438" width="10.5" height="20"/>
+                    <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8pf-kh-rF7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="8UN-M6-HXb"/>
+                <constraint firstItem="WON-Dl-mp3" firstAttribute="centerY" secondItem="SUj-90-abs" secondAttribute="centerY" id="BxO-D9-fYj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WON-Dl-mp3" secondAttribute="trailing" constant="16" id="IZQ-ZM-1LK"/>
+                <constraint firstItem="SUj-90-abs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pak-ZQ-A1K"/>
+                <constraint firstItem="8pf-kh-rF7" firstAttribute="centerY" secondItem="SUj-90-abs" secondAttribute="centerY" id="qpM-qs-t4j"/>
+                <constraint firstItem="SUj-90-abs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="s6z-LE-Jfi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hand.thumbsdown" catalog="system" width="128" height="128"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
