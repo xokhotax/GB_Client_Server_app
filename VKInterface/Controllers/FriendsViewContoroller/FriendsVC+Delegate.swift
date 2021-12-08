@@ -13,9 +13,6 @@ extension FriendsViewController: UITableViewDelegate {
     return cellHeightFriendsViewController
   }
   
-
-  
-  
   // MARK: - Delete of users
   func tableView(_ tableView: UITableView,
                  commit editingStyle: UITableViewCell.EditingStyle,

@@ -8,12 +8,14 @@
 import UIKit
 
 extension UserGroupViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView,
+                 numberOfRowsInSection section: Int) -> Int {
     userGroupsArray.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator, for: indexPath) as? CustomTableViewCell else {return UITableViewCell() }
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator,
+                                                   for: indexPath) as? CustomTableViewCell else {return UITableViewCell() }
   
     cell.configure(groups: userGroupsArray[indexPath.row])
     return cell
@@ -23,7 +25,8 @@ extension UserGroupViewController: UITableViewDataSource {
     return 1
   }
   
-  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+  func tableView(_ tableView: UITableView,
+                 canEditRowAt indexPath: IndexPath) -> Bool {
     return true
   }
   

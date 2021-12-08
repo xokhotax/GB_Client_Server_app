@@ -51,6 +51,16 @@
                             <constraint firstAttribute="trailing" secondItem="VWp-ye-ZIW" secondAttribute="trailing" constant="12" id="zqZ-9q-ef8"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfK-nL-Maa">
+                        <rect key="frame" x="149" y="68.5" width="281" height="124"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="customCellButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RiZ-d9-wAm"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atv-p4-kYi">
                         <rect key="frame" x="161" y="120.5" width="41.5" height="20"/>
                         <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
@@ -59,9 +69,14 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="UfK-nL-Maa" firstAttribute="top" secondItem="D8g-6J-IIm" secondAttribute="top" id="8vm-bd-t99"/>
+                    <constraint firstItem="UfK-nL-Maa" firstAttribute="centerY" secondItem="bDQ-3g-svG" secondAttribute="centerY" id="BKO-iv-2Ja"/>
                     <constraint firstItem="D8g-6J-IIm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GTU-Lj-kVc"/>
+                    <constraint firstItem="UfK-nL-Maa" firstAttribute="leading" secondItem="D8g-6J-IIm" secondAttribute="trailing" id="ReE-k2-Dud"/>
                     <constraint firstItem="D8g-6J-IIm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="icG-F5-gq7"/>
+                    <constraint firstItem="UfK-nL-Maa" firstAttribute="bottom" secondItem="D8g-6J-IIm" secondAttribute="bottom" id="lsJ-wB-iIN"/>
                     <constraint firstItem="Atv-p4-kYi" firstAttribute="centerY" secondItem="VWp-ye-ZIW" secondAttribute="centerY" id="pgg-hK-eYI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UfK-nL-Maa" secondAttribute="trailing" id="uBB-OC-PWJ"/>
                     <constraint firstItem="Atv-p4-kYi" firstAttribute="leading" secondItem="D8g-6J-IIm" secondAttribute="trailing" constant="12" id="vfO-VK-qyi"/>
                 </constraints>
             </tableViewCellContentView>
@@ -70,8 +85,10 @@
                 <outlet property="ContentView" destination="H2p-sc-9uM" id="YTg-h6-plj"/>
                 <outlet property="customAvatar" destination="VWp-ye-ZIW" id="3NH-FC-9hC"/>
                 <outlet property="customAvatarButton" destination="bDQ-3g-svG" id="Cyk-no-ZpI"/>
+                <outlet property="customCellButton" destination="UfK-nL-Maa" id="IC3-xI-k3E"/>
                 <outlet property="customNameField" destination="Atv-p4-kYi" id="iCI-9U-UXK"/>
                 <outlet property="customTableLayout" destination="D8g-6J-IIm" id="JKM-1A-Ntj"/>
+                <outlet property="customTableViewBackground" destination="H2p-sc-9uM" id="fmq-RZ-dFk"/>
             </connections>
             <point key="canvasLocation" x="247.82608695652175" y="97.433035714285708"/>
         </tableViewCell>

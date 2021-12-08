@@ -17,9 +17,11 @@ extension GalleryViewController: UICollectionViewDelegate {
     }
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+  func collectionView(_ collectionView: UICollectionView,
+                      didSelectItemAt indexPath: IndexPath) {
     let selectedFriendsFoto = sourceArray[indexPath.item]
-    performSegue(withIdentifier: toBigUsersGalleryVC, sender: selectedFriendsFoto)
+    performSegue(withIdentifier: toBigUsersGalleryVC,
+                 sender: selectedFriendsFoto)
   }
   
   

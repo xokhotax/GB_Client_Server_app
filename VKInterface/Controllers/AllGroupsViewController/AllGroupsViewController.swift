@@ -35,7 +35,8 @@ class AllGroupsViewController: UIViewController {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.delegate = self
-    tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
+    tableView.register(UINib(nibName: "CustomTableViewCell",
+                             bundle: nil),
                        forCellReuseIdentifier: cellReuseIdentificator)
     fillAllGroupsData()
   }

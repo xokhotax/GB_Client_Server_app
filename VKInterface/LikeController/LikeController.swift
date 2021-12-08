@@ -9,7 +9,6 @@ import UIKit
 
 class LikeController: UIView {
   
-  
   @IBOutlet weak var dislikeButton: UIButton!
   @IBOutlet weak var likeButton: UIButton!
   @IBOutlet weak var counterLabel: UILabel!
@@ -40,7 +39,6 @@ class LikeController: UIView {
     view.frame = bounds
     view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addSubview(view)
-    
   }
   
   @IBAction func pressLikeButton(_ sender: Any) {
@@ -51,7 +49,8 @@ class LikeController: UIView {
                           options: .transitionFlipFromTop,
                           animations: { [weak self] in
           guard let self = self else {return}
-          self.likeButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+          self.likeButton.setImage(UIImage(systemName: "hand.thumbsup"),
+                                   for: .normal)
         },completion: { [weak self] _ in
           guard let self = self else {return}
           self.countLikes -= 1
@@ -62,7 +61,8 @@ class LikeController: UIView {
                           options: .transitionFlipFromTop,
                           animations: { [weak self] in
           guard let self = self else {return}
-          self.likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+          self.likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"),
+                                   for: .normal)
         },completion: { [weak self] _ in
           guard let self = self else {return}
           self.countLikes += 1
@@ -79,7 +79,8 @@ class LikeController: UIView {
                           options: .transitionFlipFromTop,
                           animations: { [weak self] in
           guard let self = self else {return}
-          self.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown"), for: .normal)
+          self.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown"),
+                                      for: .normal)
         },completion: { [weak self] _ in
           guard let self = self else {return}
           self.countLikes += 1
@@ -90,7 +91,8 @@ class LikeController: UIView {
                           options: .transitionFlipFromTop,
                           animations: { [weak self] in
           guard let self = self else {return}
-          self.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"), for: .normal)
+          self.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"),
+                                      for: .normal)
         },completion: { [weak self] _ in
           guard let self = self else {return}
           self.countLikes -= 1

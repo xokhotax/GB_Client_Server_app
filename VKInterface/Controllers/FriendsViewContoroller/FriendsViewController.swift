@@ -10,15 +10,15 @@ import UIKit
 class FriendsViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
-//  @IBOutlet weak var searchFriendsBar: UISearchBar!
+  @IBOutlet weak var searchBarFriend: UISearchBar!
+  
   
   let cellReuseIdentificator = "cellReuseIdentificator"
 
   let toGallerySeague = "toGallerySeague"
   
+  var sourceFriendsArray = [Friends]()
   var friendsArray = [Friends]()
-  
-//  var filteredData: [Friends]!
 
   
   func fillFriendsData() {
@@ -34,19 +34,18 @@ class FriendsViewController: UIViewController {
                           surname: nil,
                           avatar: "dipperAvatar",
                           photoGallery: ["gf1", "gf2", "gf3", "gf4", "gf5"])
-    friendsArray.append(friendOne)
-    friendsArray.append(friendTwo)
-    friendsArray.append(friendThree)
+    sourceFriendsArray.append(friendOne)
+    sourceFriendsArray.append(friendTwo)
+    sourceFriendsArray.append(friendThree)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-//    searchFriendsBar.delegate = self
-//    filteredData = friendsArray
-    
+    searchBarFriend.delegate = self
     tableView.dataSource = self
     tableView.delegate = self
+  
+    
     tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                        forCellReuseIdentifier: cellReuseIdentificator)
     fillFriendsData()
@@ -56,14 +55,13 @@ class FriendsViewController: UIViewController {
                                            name:
                                             Notification.Name("addNewUserButton"),
                                            object: nil)
+    friendsArray = sourceFriendsArray
     tableView.reloadData()
   }
   
   @objc func addNewUser (_ notification: Notification) {
-    
     guard let groupObject = notification.object as? Friends else { return }
-    
-    friendsArray.append(groupObject)
+    sourceFriendsArray.append(groupObject)
     tableView.reloadData()
   }
   

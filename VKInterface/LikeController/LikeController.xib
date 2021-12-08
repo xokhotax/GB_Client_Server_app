@@ -26,12 +26,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pf-kh-rF7">
-                    <rect key="frame" x="16" y="428" width="79.5" height="40"/>
+                    <rect key="frame" x="16" y="428" width="25.5" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ijE-YN-8tI"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button" image="hand.thumbsdown" catalog="system">
+                    <state key="normal" image="hand.thumbsdown" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                     </state>
                     <connections>

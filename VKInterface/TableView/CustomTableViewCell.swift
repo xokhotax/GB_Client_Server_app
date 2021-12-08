@@ -20,6 +20,8 @@ class CustomTableViewCell: UITableViewCell {
   @IBOutlet weak var customTableLayout: UIView!
   @IBOutlet weak var customAvatarButton: UIButton!
   @IBOutlet weak var ContentView: UIView!
+  @IBOutlet weak var customCellButton: UIButton!
+  @IBOutlet weak var customTableViewBackground: UIView!
   
   weak var  delegate: CustomTableViewCellDelegate?
   
@@ -29,20 +31,16 @@ class CustomTableViewCell: UITableViewCell {
     super.prepareForReuse()
     customAvatar.image = nil
     customNameField.text = nil
-    
   }
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    
   }
   
   func configure(friends: Friends){
     
     customAvatar.image = blankAvatar
     self.choosedFriend = friends
-    
-    
     guard let customAvatarHeight = customAvatar.image?.cgImage?.height else { return }
     customAvatar.layer.cornerRadius = CGFloat (customAvatarHeight / 4)
     customTableLayout.layer.cornerRadius = CGFloat (customAvatarHeight / 4)
@@ -65,38 +63,39 @@ class CustomTableViewCell: UITableViewCell {
   
   func configure(groups: Groups){
     customAvatar.image = blankAvatar
-    guard let avatar = groups.avatar else { return customAvatar.image = blankAvatar }
+    guard let avatar = groups.avatar else {return customAvatar.image = blankAvatar}
     customAvatar.image = UIImage(named: avatar)
     customNameField.text = groups.name
     customAvatarButton.alpha = 0
   }
   
   @IBAction func customAvatarButtonToFriendGallery(_ sender: Any) {
-   
     let startFrame = customAvatar.frame
-    
     UIView.animate(withDuration: 2,
                    animations: {[weak self] in
       guard let self = self else {return}
-      
-      self.customAvatar.frame = CGRect(x: -10, y: 0, width: 0, height: 0)
-      
-      
+      self.customAvatar.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
     }, completion: { isSuccess in
       if isSuccess {
         UIView.animate(withDuration: 3,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: .pi,
+                       options: .transitionFlipFromTop,
                        animations: {[weak self] in
           guard let self = self else {return}
-
           self.customAvatar.frame = startFrame
         }, completion: { [weak self] isSuccess in
           if isSuccess, let self = self,
              let friend = self.choosedFriend {
             self.delegate?.pressedPicture(friend: friend)
           }
-          
         })
       }
     })
+  }
+  @IBAction func customCellButton(_ sender: Any) {
+    guard let choosedFriend = self.choosedFriend else {return}
+    self.delegate?.pressedPicture(friend: choosedFriend)
   }
 }

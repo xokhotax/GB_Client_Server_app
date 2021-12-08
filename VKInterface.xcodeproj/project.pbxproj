@@ -10,7 +10,6 @@
 		031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */; };
 		031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A1275CD7670036A9C3 /* LikeController.swift */; };
 		031AE0A6275CE8F00036A9C3 /* LikeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031AE0A5275CE8F00036A9C3 /* LikeController.xib */; };
-		031AE0A8275CF0FF0036A9C3 /* FriendsVC+Delegate+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A7275CF0FF0036A9C3 /* FriendsVC+Delegate+Search.swift */; };
 		031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A9275EA28B0036A9C3 /* Constants.swift */; };
 		03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C8C2756AE220056B659 /* GalleryViewController.swift */; };
 		03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C912756AF990056B659 /* GalleryVC+SourceData.swift */; };
@@ -52,13 +51,13 @@
 		03C7107E274122AA0000159F /* 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71077274122AA0000159F /* 80x80.png */; };
 		03C71080274124620000159F /* 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C7107F274124620000159F /* 1024x1024.png */; };
 		03C7108227412DB70000159F /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7108127412DB70000159F /* LoginScreenViewController.swift */; };
+		03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		031AE0A1275CD7670036A9C3 /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
 		031AE0A5275CE8F00036A9C3 /* LikeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeController.xib; sourceTree = "<group>"; };
-		031AE0A7275CF0FF0036A9C3 /* FriendsVC+Delegate+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+Delegate+Search.swift"; sourceTree = "<group>"; };
 		031AE0A9275EA28B0036A9C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		03370C8C2756AE220056B659 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		03370C912756AF990056B659 /* GalleryVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryVC+SourceData.swift"; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		03C71077274122AA0000159F /* 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80x80.png; sourceTree = "<group>"; };
 		03C7107F274124620000159F /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
 		03C7108127412DB70000159F /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+SearchBar+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +206,7 @@
 				03BAC0D22753927B00A34E9C /* FriendsViewController.swift */,
 				03BAC0E3275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift */,
 				03BAC0EA27539E9F00A34E9C /* FriendsVC+Delegate.swift */,
-				031AE0A7275CF0FF0036A9C3 /* FriendsVC+Delegate+Search.swift */,
+				03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */,
 			);
 			path = FriendsViewContoroller;
 			sourceTree = "<group>";
@@ -386,7 +386,6 @@
 				03BAC0F72753CD6C00A34E9C /* AllGroupsViewController.swift in Sources */,
 				033F1FB52741035C00C20077 /* AppDelegate.swift in Sources */,
 				03C7108227412DB70000159F /* LoginScreenViewController.swift in Sources */,
-				031AE0A8275CF0FF0036A9C3 /* FriendsVC+Delegate+Search.swift in Sources */,
 				03BAC0FD2753CE3C00A34E9C /* UserGroupVC+Deligate.swift in Sources */,
 				03BAC0E4275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift in Sources */,
 				03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */,
@@ -399,6 +398,7 @@
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */,
 				03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */,
+				03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */,
 				033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */,
 				03BAC0E927539A4D00A34E9C /* Groups.swift in Sources */,
 			);
