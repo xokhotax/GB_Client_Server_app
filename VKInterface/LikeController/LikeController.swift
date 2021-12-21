@@ -29,7 +29,8 @@ class LikeController: UIView {
   private func loadFromNimb() -> UIView {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "LikeController", bundle: bundle)
-    guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {return UIView()}
+    guard let view = nib.instantiate(withOwner: self,
+                                     options: nil).first as? UIView else {return UIView()}
     return view
   }
   

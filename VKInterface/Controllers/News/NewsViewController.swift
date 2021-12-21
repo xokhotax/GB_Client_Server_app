@@ -15,6 +15,7 @@ class NewsViewController: UIViewController {
   @IBOutlet weak var secondItemCenter: UIView!
   @IBOutlet weak var thirdItem: UIView!
   @IBOutlet weak var thirdItemCenter: UIView!
+  @IBOutlet weak var singletonButton: UIButton!
   
   func loadingAnimation(times: Int, counter: Int) {
     
@@ -112,7 +113,12 @@ class NewsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    loadingAnimation(times: 5, counter: 0)
     loadingAnimationKeyFrame(times: 5, counter: 0)
+    let session = Session.shared
+    session.token = "Vasya"
+    session.userId = 56
+  }
+  
+  @IBAction func toSingletonView(_ sender: Any) {
   }
 }

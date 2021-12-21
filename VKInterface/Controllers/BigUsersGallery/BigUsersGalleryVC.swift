@@ -20,8 +20,6 @@ class BigUsersGalleryVC: UIViewController {
     collectionView.register(UINib(nibName: "GalleryCell", bundle: nil),
                             forCellWithReuseIdentifier: "reUseIdentificator")
     
-    //    collectionView.delegate = self
-    
     let tapGestureRecognizer = UITapGestureRecognizer(target: self,
                                                       action: #selector(tapped(_:)))
     self.view.addGestureRecognizer(tapGestureRecognizer)

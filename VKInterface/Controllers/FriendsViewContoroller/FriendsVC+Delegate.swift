@@ -43,13 +43,5 @@ extension FriendsViewController: UITableViewDelegate {
        let destination = segue.destination as? GalleryViewController {
       destination.sourceArray = friendsFotoArray
     }
-  }
-//
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    if let friendsFotoArray = friendsArray[indexPath.item].photoGallery {
-//      performSegue(withIdentifier: toGallerySeague, sender: friendsFotoArray)
-//    }
-//  }
-  
-  
+  }  
 }

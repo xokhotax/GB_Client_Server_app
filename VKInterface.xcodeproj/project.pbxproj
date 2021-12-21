@@ -21,6 +21,9 @@
 		03370CA02757ABF40056B659 /* BigUsersGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C9F2757ABF40056B659 /* BigUsersGalleryVC.swift */; };
 		03370CA22757AF270056B659 /* BigUsersGalleryVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA12757AF270056B659 /* BigUsersGalleryVC+SourceData.swift */; };
 		03370CA4275A66010056B659 /* BigUserVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA3275A66010056B659 /* BigUserVC+Delegate.swift */; };
+		0339BB132771F15300189098 /* SingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB122771F15300189098 /* SingletonViewController.swift */; };
+		0339BB152771F1DA00189098 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB142771F1DA00189098 /* Session.swift */; };
+		0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */; };
 		033F1FB52741035C00C20077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB42741035C00C20077 /* AppDelegate.swift */; };
 		033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB62741035C00C20077 /* SceneDelegate.swift */; };
 		033F1FB92741035C00C20077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB82741035C00C20077 /* ViewController.swift */; };
@@ -72,6 +75,9 @@
 		03370C9F2757ABF40056B659 /* BigUsersGalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigUsersGalleryVC.swift; sourceTree = "<group>"; };
 		03370CA12757AF270056B659 /* BigUsersGalleryVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigUsersGalleryVC+SourceData.swift"; sourceTree = "<group>"; };
 		03370CA3275A66010056B659 /* BigUserVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigUserVC+Delegate.swift"; sourceTree = "<group>"; };
+		0339BB122771F15300189098 /* SingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonViewController.swift; sourceTree = "<group>"; };
+		0339BB142771F1DA00189098 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FriendsDelegate.swift"; sourceTree = "<group>"; };
 		033F1FB12741035C00C20077 /* VKInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033F1FB42741035C00C20077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033F1FB62741035C00C20077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0339BB112771F13000189098 /* SigletonVC */ = {
+			isa = PBXGroup;
+			children = (
+				0339BB122771F15300189098 /* SingletonViewController.swift */,
+			);
+			path = SigletonVC;
+			sourceTree = "<group>";
+		};
 		033F1FA82741035C00C20077 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +243,7 @@
 				03BAC0E3275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift */,
 				03BAC0EA27539E9F00A34E9C /* FriendsVC+Delegate.swift */,
 				03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */,
+				0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */,
 			);
 			path = FriendsViewContoroller;
 			sourceTree = "<group>";
@@ -236,6 +251,7 @@
 		03BAC0D5275392DB00A34E9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0339BB112771F13000189098 /* SigletonVC */,
 				030F6309276137070069425F /* News */,
 				03F0462627613424000DBC23 /* LaunchScreen */,
 				03370C9C2757AB280056B659 /* BigUsersGallery */,
@@ -264,6 +280,7 @@
 				03BAC0E6275399C500A34E9C /* Friends.swift */,
 				03BAC0E827539A4D00A34E9C /* Groups.swift */,
 				031AE0A9275EA28B0036A9C3 /* Constants.swift */,
+				0339BB142771F1DA00189098 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +432,7 @@
 				031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */,
 				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
+				0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
 				03BAC0E7275399C500A34E9C /* Friends.swift in Sources */,
 				03BAC0F52753CD5E00A34E9C /* UserGroupViewController.swift in Sources */,
@@ -423,12 +441,14 @@
 				03C7108227412DB70000159F /* LoginScreenViewController.swift in Sources */,
 				03BAC0FD2753CE3C00A34E9C /* UserGroupVC+Deligate.swift in Sources */,
 				03BAC0E4275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift in Sources */,
+				0339BB152771F1DA00189098 /* Session.swift in Sources */,
 				03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */,
 				03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */,
 				03370CA22757AF270056B659 /* BigUsersGalleryVC+SourceData.swift in Sources */,
 				03370C992756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */,
 				03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */,
+				0339BB132771F15300189098 /* SingletonViewController.swift in Sources */,
 				03370CA4275A66010056B659 /* BigUserVC+Delegate.swift in Sources */,
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */,

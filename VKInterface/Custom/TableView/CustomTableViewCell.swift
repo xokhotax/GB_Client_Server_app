@@ -73,7 +73,7 @@ class CustomTableViewCell: UITableViewCell {
     UIView.animate(withDuration: 2,
                    animations: {[weak self] in
       guard let middleXVAlue = self?.customAvatar.frame.midX,
-              let middleYValue =  self?.customAvatar.frame.midY else {return}
+            let middleYValue =  self?.customAvatar.frame.midY else {return}
       self?.customAvatar.frame = CGRect(x: middleXVAlue,
                                         y: middleYValue,
                                         width: 0,
