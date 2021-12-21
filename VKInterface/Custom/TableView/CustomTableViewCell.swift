@@ -21,7 +21,6 @@ class CustomTableViewCell: UITableViewCell {
   @IBOutlet weak var customAvatarButton: UIButton!
   @IBOutlet weak var ContentView: UIView!
   @IBOutlet weak var customCellButton: UIButton!
-  @IBOutlet weak var customTableViewBackground: UIView!
   
   weak var  delegate: CustomTableViewCellDelegate?
   
@@ -73,15 +72,15 @@ class CustomTableViewCell: UITableViewCell {
     let startFrame = customAvatar.frame
     UIView.animate(withDuration: 2,
                    animations: {[weak self] in
-      guard let self = self else {return}
-      self.customAvatar.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
+      guard let middleXVAlue = self?.customAvatar.frame.midX,
+              let middleYValue =  self?.customAvatar.frame.midY else {return}
+      self?.customAvatar.frame = CGRect(x: middleXVAlue,
+                                        y: middleYValue,
+                                        width: 0,
+                                        height: 0)
     }, completion: { isSuccess in
       if isSuccess {
         UIView.animate(withDuration: 3,
-                       delay: 0,
-                       usingSpringWithDamping: 1,
-                       initialSpringVelocity: .pi,
-                       options: .transitionFlipFromTop,
                        animations: {[weak self] in
           guard let self = self else {return}
           self.customAvatar.frame = startFrame

@@ -10,8 +10,7 @@ import UIKit
 class BigUsersGalleryVC: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
-  @IBOutlet weak var likeController: UIView!
-  
+
   var sourceArray: [String] = []
   
   override func viewDidLoad() {
