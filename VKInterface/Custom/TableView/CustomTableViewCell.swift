@@ -11,9 +11,9 @@ protocol CustomTableViewCellDelegate: AnyObject {
   func pressedPicture(friend: Friends)
 }
 
-class CustomTableViewCell: UITableViewCell {
+final class CustomTableViewCell: UITableViewCell {
   
-  let blankAvatar = UIImage(named: "blankAvatar")
+  private let blankAvatar = UIImage(named: "blankAvatar")
   
   @IBOutlet weak var customNameField: UILabel!
   @IBOutlet weak var customAvatar: UIImageView!
@@ -24,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
   
   weak var  delegate: CustomTableViewCellDelegate?
   
-  var choosedFriend: Friends?
+  private var choosedFriend: Friends?
   
   override func prepareForReuse() {
     super.prepareForReuse()

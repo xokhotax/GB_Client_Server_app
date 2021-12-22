@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+final class NewsViewController: UIViewController {
   
   @IBOutlet weak var firstItem: UIView!
   @IBOutlet weak var firstItemCenter: UIView!
@@ -17,7 +17,7 @@ class NewsViewController: UIViewController {
   @IBOutlet weak var thirdItemCenter: UIView!
   @IBOutlet weak var singletonButton: UIButton!
   
-  func loadingAnimation(times: Int, counter: Int) {
+  private func loadingAnimation(times: Int, counter: Int) {
     
     let timeInteval: Double = 1
     
@@ -68,7 +68,7 @@ class NewsViewController: UIViewController {
     }
   }
   
-  func loadingAnimationKeyFrame(times: Int, counter: Int) {
+  private func loadingAnimationKeyFrame(times: Int, counter: Int) {
     let durationAnimation: CGFloat = 3
     firstItem.alpha = 0
     secondItem.alpha = 0

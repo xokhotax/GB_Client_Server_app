@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SingletonViewController: UIViewController {
+final class SingletonViewController: UIViewController {
   
   @IBOutlet weak var textFieldOne: UILabel!
   @IBOutlet weak var textFieldTwo: UILabel!

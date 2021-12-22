@@ -24,17 +24,17 @@ class FriendsData {
   
   func fillFriendsData() {
     let friendOne = Friends(name: "Вася",
-                          surname: "Попов",
-                          avatar: "bartAvatar",
-                          photoGallery: ["homer", "lisa", "bart", "all", "homer2"])
+                            surname: "Попов",
+                            avatar: "bartAvatar",
+                            photoGallery: ["homer", "lisa", "bart", "all", "homer2"])
     let friendTwo = Friends(name: "Мария",
-                          surname: "Петрова",
-                          avatar: nil,
-                          photoGallery: ["fg1", "fg2","fg3", "fg4", "fg5"])
+                            surname: "Петрова",
+                            avatar: nil,
+                            photoGallery: ["fg1", "fg2","fg3", "fg4", "fg5"])
     let friendThree = Friends(name: "Инокентий",
-                          surname: nil,
-                          avatar: "dipperAvatar",
-                          photoGallery: ["gf1", "gf2", "gf3", "gf4", "gf5"])
+                              surname: nil,
+                              avatar: "dipperAvatar",
+                              photoGallery: ["gf1", "gf2", "gf3", "gf4", "gf5"])
     self.delegate?.dataLoad(friends: friendOne)
     self.delegate?.dataLoad(friends: friendTwo)
     self.delegate?.dataLoad(friends: friendThree)
@@ -42,6 +42,4 @@ class FriendsData {
     sourceFriendsArray.append(friendTwo)
     sourceFriendsArray.append(friendThree)
   }
-  
-  
 }

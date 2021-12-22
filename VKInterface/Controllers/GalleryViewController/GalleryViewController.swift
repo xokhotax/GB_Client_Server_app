@@ -16,18 +16,17 @@ class GalleryViewController: UIViewController {
   @IBOutlet weak var swipeGallerySecondImage: UIImageView!
   
   var sourceArray: [String] = []
-  var interactiveAnimation: UIViewPropertyAnimator!
+  private var interactiveAnimation: UIViewPropertyAnimator!
   let toBigUsersGalleryVC = "toBigUsersGalleryVC"
-  var i = 0
+  private var i = 0
   
-  
-  func inputDataToswipeGalleryImage() {
+  private func inputDataToswipeGalleryImage() {
     guard let transferedGallery = UIImage(named: sourceArray[i]) else {return}
     swipeGalleryImage.image = transferedGallery
     swipeGallerySecondImage.image = transferedGallery
   }
   
-  func nextPictureToswipeGalleryImage() {
+  private func nextPictureToswipeGalleryImage() {
     if i < sourceArray.count {
       guard let transferedGallery = UIImage(named: sourceArray[i]) else {return}
       swipeGalleryImage.image = transferedGallery
@@ -83,7 +82,6 @@ class GalleryViewController: UIViewController {
     }
   }
 
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.dataSource = self

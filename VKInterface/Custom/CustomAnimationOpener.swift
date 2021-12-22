@@ -39,7 +39,7 @@ import UIKit
 
 //MARK: Rotation
 
-class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
+final class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
     return 3
   }
@@ -49,7 +49,6 @@ class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
           let destinationController = transitionContext.viewController(forKey: .to)
     else {return}
     
-    //    let containerFrame = transitionContext.containerView.frame
     transitionContext.containerView.addSubview(destinationController.view)
     let destinationControllerViewFrame = destinationController.view.frame
     let destinationControllerViewBounds = destinationController.view.bounds

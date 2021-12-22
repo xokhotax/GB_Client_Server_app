@@ -7,15 +7,14 @@
 
 import UIKit
 
-class BigUsersGalleryVC: UIViewController {
+final class BigUsersGalleryVC: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
-
+  
   var sourceArray: [String] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     collectionView.dataSource = self
     collectionView.register(UINib(nibName: "GalleryCell", bundle: nil),
                             forCellWithReuseIdentifier: "reUseIdentificator")
