@@ -16,6 +16,8 @@ final class NewsViewController: UIViewController {
   @IBOutlet weak var thirdItem: UIView!
   @IBOutlet weak var thirdItemCenter: UIView!
   @IBOutlet weak var singletonButton: UIButton!
+  @IBOutlet weak var groupSearch: UITextField!
+  @IBOutlet weak var groupSearchButton: UIButton!
   
   private func loadingAnimation(times: Int, counter: Int) {
     
@@ -111,14 +113,36 @@ final class NewsViewController: UIViewController {
     }
   }
   
+  private func vkGroupSearch() {
+    
+    let token = Session.shared.token
+    
+    var urlComponents = URLComponents()
+    urlComponents.scheme = "https"
+    urlComponents.host = "api.vk.com"
+    urlComponents.path = "/method/groups.search"
+    urlComponents.queryItems = [
+      URLQueryItem(name: "access_token", value: token),
+      URLQueryItem(name: "q", value: groupSearch.text),
+      URLQueryItem(name: "offset", value: "3"),
+      URLQueryItem(name: "count", value: "3"),
+      URLQueryItem(name: "v", value: "5.89")
+    ]
+    vkPrintDataToConsoleSearch(urlComponents: urlComponents)
+  }
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     loadingAnimationKeyFrame(times: 5, counter: 0)
-    let session = Session.shared
-    session.token = "Vasya"
-    session.userId = 56
   }
   
   @IBAction func toSingletonView(_ sender: Any) {
   }
+  
+  @IBAction func groupSearchButton(_ sender: Any) {
+    vkGroupSearch()
+  }
+  
 }

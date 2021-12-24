@@ -33,6 +33,9 @@
 		033F1FC92741037000C20077 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FC82741037000C20077 /* pngwing.com.png */; };
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
+		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
+		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
+		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
 		03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0D22753927B00A34E9C /* FriendsViewController.swift */; };
 		03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */; };
 		03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */; };
@@ -89,6 +92,9 @@
 		033F1FC82741037000C20077 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
 		035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+NavigationControllerDeligate.swift"; sourceTree = "<group>"; };
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
+		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; };
+		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
+		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; };
 		03BAC0D22753927B00A34E9C /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 		033F1FB32741035C00C20077 /* VKInterface */ = {
 			isa = PBXGroup;
 			children = (
+				039FCC5727760D05007AD9D8 /* GlobalFunc */,
 				03370CA5275B9E9B0056B659 /* Extensions */,
 				033F1FB42741035C00C20077 /* AppDelegate.swift */,
 				033F1FB62741035C00C20077 /* SceneDelegate.swift */,
@@ -234,6 +241,39 @@
 				03C7106F27410AE80000159F /* Fonts */,
 			);
 			path = VKInterface;
+			sourceTree = "<group>";
+		};
+		039FCC522775DDC6007AD9D8 /* VKLoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */,
+				039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */,
+			);
+			path = VKLoginVC;
+			sourceTree = "<group>";
+		};
+		039FCC552775E36C007AD9D8 /* LoginScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				03C7108127412DB70000159F /* LoginScreenViewController.swift */,
+			);
+			path = LoginScreenVC;
+			sourceTree = "<group>";
+		};
+		039FCC562775E37A007AD9D8 /* AddFriendsVC */ = {
+			isa = PBXGroup;
+			children = (
+				03BAC0EE2753B99A00A34E9C /* AddFriendViewController.swift */,
+			);
+			path = AddFriendsVC;
+			sourceTree = "<group>";
+		};
+		039FCC5727760D05007AD9D8 /* GlobalFunc */ = {
+			isa = PBXGroup;
+			children = (
+				039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */,
+			);
+			path = GlobalFunc;
 			sourceTree = "<group>";
 		};
 		03BAC0D12753924800A34E9C /* FriendsViewContoroller */ = {
@@ -259,8 +299,9 @@
 				03BAC0ED2753B81700A34E9C /* AllGroupsViewController */,
 				03BAC0EC2753B80C00A34E9C /* GroupViewController */,
 				03BAC0D12753924800A34E9C /* FriendsViewContoroller */,
-				03C7108127412DB70000159F /* LoginScreenViewController.swift */,
-				03BAC0EE2753B99A00A34E9C /* AddFriendViewController.swift */,
+				039FCC552775E36C007AD9D8 /* LoginScreenVC */,
+				039FCC522775DDC6007AD9D8 /* VKLoginVC */,
+				039FCC562775E37A007AD9D8 /* AddFriendsVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -435,6 +476,7 @@
 				0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
 				03BAC0E7275399C500A34E9C /* Friends.swift in Sources */,
+				039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */,
 				03BAC0F52753CD5E00A34E9C /* UserGroupViewController.swift in Sources */,
 				03BAC0F72753CD6C00A34E9C /* AllGroupsViewController.swift in Sources */,
 				033F1FB52741035C00C20077 /* AppDelegate.swift in Sources */,
@@ -456,7 +498,9 @@
 				03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */,
 				03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */,
 				033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */,
+				039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */,
 				03BAC0E927539A4D00A34E9C /* Groups.swift in Sources */,
+				039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

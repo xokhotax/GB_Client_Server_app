@@ -16,8 +16,8 @@ final class SingletonViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let session = Session.shared
-    textFieldOne.text = session.token
-    textFieldTwo.text = String(session.userId)
+    textFieldOne.text = "User Token: \(session.token)"
+    textFieldTwo.text = "UserID: \(session.userId)"
     
   }
   
