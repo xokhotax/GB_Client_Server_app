@@ -18,9 +18,8 @@
 		03370C972756B1660056B659 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03370C952756B1650056B659 /* GalleryCell.xib */; };
 		03370C992756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C982756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift */; };
 		03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C9A2756BACE0056B659 /* GalleryVC+Delegate.swift */; };
-		03370CA02757ABF40056B659 /* BigUsersGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C9F2757ABF40056B659 /* BigUsersGalleryVC.swift */; };
-		03370CA22757AF270056B659 /* BigUsersGalleryVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA12757AF270056B659 /* BigUsersGalleryVC+SourceData.swift */; };
-		03370CA4275A66010056B659 /* BigUserVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA3275A66010056B659 /* BigUserVC+Delegate.swift */; };
+		03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C9F2757ABF40056B659 /* UserGalleryBigPicture.swift */; };
+		03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA12757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift */; };
 		0339BB132771F15300189098 /* SingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB122771F15300189098 /* SingletonViewController.swift */; };
 		0339BB152771F1DA00189098 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB142771F1DA00189098 /* Session.swift */; };
 		0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */; };
@@ -76,9 +75,8 @@
 		03370C952756B1650056B659 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		03370C982756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryVC+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		03370C9A2756BACE0056B659 /* GalleryVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryVC+Delegate.swift"; sourceTree = "<group>"; };
-		03370C9F2757ABF40056B659 /* BigUsersGalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigUsersGalleryVC.swift; sourceTree = "<group>"; };
-		03370CA12757AF270056B659 /* BigUsersGalleryVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigUsersGalleryVC+SourceData.swift"; sourceTree = "<group>"; };
-		03370CA3275A66010056B659 /* BigUserVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigUserVC+Delegate.swift"; sourceTree = "<group>"; };
+		03370C9F2757ABF40056B659 /* UserGalleryBigPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGalleryBigPicture.swift; sourceTree = "<group>"; };
+		03370CA12757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGalleryBigPictureVC+SourceData.swift"; sourceTree = "<group>"; };
 		0339BB122771F15300189098 /* SingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonViewController.swift; sourceTree = "<group>"; };
 		0339BB142771F1DA00189098 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FriendsDelegate.swift"; sourceTree = "<group>"; };
@@ -185,9 +183,8 @@
 		03370C9C2757AB280056B659 /* BigUsersGallery */ = {
 			isa = PBXGroup;
 			children = (
-				03370C9F2757ABF40056B659 /* BigUsersGalleryVC.swift */,
-				03370CA12757AF270056B659 /* BigUsersGalleryVC+SourceData.swift */,
-				03370CA3275A66010056B659 /* BigUserVC+Delegate.swift */,
+				03370C9F2757ABF40056B659 /* UserGalleryBigPicture.swift */,
+				03370CA12757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift */,
 			);
 			path = BigUsersGallery;
 			sourceTree = "<group>";
@@ -474,7 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03370CA02757ABF40056B659 /* BigUsersGalleryVC.swift in Sources */,
+				03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */,
 				03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */,
 				039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */,
 				03BAC0FB2753CE2D00A34E9C /* UserGroupVC+DataSource.swift in Sources */,
@@ -498,12 +495,11 @@
 				0339BB152771F1DA00189098 /* Session.swift in Sources */,
 				03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */,
 				03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */,
-				03370CA22757AF270056B659 /* BigUsersGalleryVC+SourceData.swift in Sources */,
+				03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */,
 				03370C992756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */,
 				03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */,
 				0339BB132771F15300189098 /* SingletonViewController.swift in Sources */,
-				03370CA4275A66010056B659 /* BigUserVC+Delegate.swift in Sources */,
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */,
 				03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */,

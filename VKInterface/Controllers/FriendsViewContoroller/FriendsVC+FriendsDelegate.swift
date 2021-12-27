@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension FriendsViewController: FriendsDelegate {
+extension FriendsViewController: FriendsDataLoad {
   func dataLoad(friends: Friends) {
   }
 }

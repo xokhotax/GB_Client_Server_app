@@ -12,15 +12,18 @@ struct Friends {
   var photoGallery: [String]?
 }
 
-protocol FriendsDelegate: AnyObject {
+protocol FriendsDataLoad: AnyObject {
   func dataLoad (friends: Friends)
 }
 
 class FriendsData {
   
+  static let shared = FriendsData()
+  private init() {}
+  
   var sourceFriendsArray = [Friends]()
   
-  weak var delegate: FriendsDelegate?
+  weak var delegate: FriendsDataLoad?
   
   func fillFriendsData() {
     let friendOne = Friends(name: "Вася",

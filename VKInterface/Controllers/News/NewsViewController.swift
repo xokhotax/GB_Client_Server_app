@@ -131,8 +131,6 @@ final class NewsViewController: UIViewController {
     vkPrintDataToConsoleSearch(urlComponents: urlComponents)
   }
   
-  
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     loadingAnimationKeyFrame(times: 5, counter: 0)

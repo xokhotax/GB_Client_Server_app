@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BigUsersGalleryVC: UIViewController {
+final class UserGalleryBigPicture: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
   

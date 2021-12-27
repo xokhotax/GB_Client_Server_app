@@ -1,4 +1,4 @@
- //
+//
 //  GalleryVC+SourceData.swift
 //  VKInterface
 //
@@ -24,5 +24,5 @@ extension GalleryViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int{
     return 1
   }
-
+  
 }
