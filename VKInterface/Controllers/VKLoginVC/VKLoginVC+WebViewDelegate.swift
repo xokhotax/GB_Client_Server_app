@@ -37,9 +37,6 @@ extension VKLoginScreenVC: WKNavigationDelegate {
     session.token = token
     session.userId = userId
     
-  
-//    print(imageCount)
-    
     decisionHandler(.cancel)
     
   }

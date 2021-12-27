@@ -629,10 +629,10 @@
             </objects>
             <point key="canvasLocation" x="4292.753623188406" y="731.91964285714278"/>
         </scene>
-        <!--Big Users GalleryVC-->
+        <!--User Gallery Big Picture-->
         <scene sceneID="Ffe-fK-B17">
             <objects>
-                <viewController id="KQ0-aF-vG8" customClass="BigUsersGalleryVC" customModule="VKInterface" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KQ0-aF-vG8" customClass="UserGalleryBigPicture" customModule="VKInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X19-op-925">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

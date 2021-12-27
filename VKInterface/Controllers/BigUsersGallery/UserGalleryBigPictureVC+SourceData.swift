@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension BigUsersGalleryVC: UICollectionViewDataSource {
+extension UserGalleryBigPicture: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
     return sourceArray.count

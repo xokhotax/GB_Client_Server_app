@@ -7,13 +7,12 @@
 
 import UIKit
 
-extension FriendsViewController: UISearchBarDelegate{
+extension FriendsViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-    let friendsData = FriendsData()
     if searchText .isEmpty{
-      friendsArray = friendsData.sourceFriendsArray
+      friendsArray = FriendsData.shared.sourceFriendsArray
     } else {
-      friendsArray = friendsData.sourceFriendsArray.filter({ friendItem in
+      friendsArray = FriendsData.shared.sourceFriendsArray.filter({ friendItem in
         friendItem.name.lowercased().contains(searchText.lowercased())
       })
     }

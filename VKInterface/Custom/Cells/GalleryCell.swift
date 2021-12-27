@@ -18,10 +18,6 @@ import UIKit
     photoImageView.image = nil
   }
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-  
   func configure(image: UIImage?){
     photoImageView.image = image
     likeController.isHidden = true

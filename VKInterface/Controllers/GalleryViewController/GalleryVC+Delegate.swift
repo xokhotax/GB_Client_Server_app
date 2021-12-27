@@ -12,7 +12,7 @@ extension GalleryViewController: UICollectionViewDelegate {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == toBigUsersGalleryVC,
        let selectedFriendsFoto = sender as? String,
-       let destination = segue.destination as? BigUsersGalleryVC {
+       let destination = segue.destination as? UserGalleryBigPicture {
       destination.sourceArray.append(selectedFriendsFoto)
     }
   }

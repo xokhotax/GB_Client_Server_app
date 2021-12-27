@@ -12,28 +12,28 @@ class FriendsViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var searchBarFriend: UISearchBar!
   
-  weak var delegate: FriendsDelegate? 
+  weak var delegate: FriendsDataLoad? 
   
   let cellReuseIdentificator = "cellReuseIdentificator"
   let toGallerySeague = "toGallerySeague"
   var friendsArray = [Friends]()
 
-  private let friendsData = FriendsData()
+  let friendsData = FriendsData.shared.sourceFriendsArray
   
   override func viewDidLoad() {
     super.viewDidLoad()
     searchBarFriend.delegate = self
     tableView.dataSource = self
     tableView.delegate = self
-    friendsData.delegate = self
+    FriendsData.shared.delegate = self
     tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                        forCellReuseIdentifier: cellReuseIdentificator)
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(addNewUser(_ :)),
                                            name: Notification.Name("addNewUserButton"),
                                            object: nil)
-    friendsData.fillFriendsData()
-    friendsArray = friendsData.sourceFriendsArray
+    FriendsData.shared.fillFriendsData()
+    friendsArray = FriendsData.shared.sourceFriendsArray
     tableView.reloadData()
   }
   
