@@ -19,7 +19,7 @@ class ObserverVC: UIViewController, Subscriber {
   }
   
   @IBAction func publishButton(_ sender: Any) {
-    reporter.releaseVideo()
+    reporter.submitCounter()
   }
   
   func update(subject: Reporter) {
@@ -53,7 +53,7 @@ class Reporter {
     }
   }
   
-  func releaseVideo() {
+  func submitCounter() {
     counter += 1
     counterInfo = "Times button pushed" + "\(counter)"
     notify()
