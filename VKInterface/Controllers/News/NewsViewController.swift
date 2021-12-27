@@ -145,4 +145,8 @@ final class NewsViewController: UIViewController {
     vkGroupSearch()
   }
   
+  @IBAction func toObserverPatternVC(_ sender: Any) {
+  }
+  
+  
 }

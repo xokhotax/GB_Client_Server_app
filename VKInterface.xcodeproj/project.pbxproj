@@ -36,6 +36,7 @@
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
 		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
+		039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */; };
 		03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0D22753927B00A34E9C /* FriendsViewController.swift */; };
 		03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */; };
 		03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */; };
@@ -95,6 +96,7 @@
 		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
 		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; };
+		039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
 		03BAC0D22753927B00A34E9C /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -276,6 +278,14 @@
 			path = GlobalFunc;
 			sourceTree = "<group>";
 		};
+		039FCC5A2779FBE6007AD9D8 /* ObserverVC */ = {
+			isa = PBXGroup;
+			children = (
+				039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */,
+			);
+			path = ObserverVC;
+			sourceTree = "<group>";
+		};
 		03BAC0D12753924800A34E9C /* FriendsViewContoroller */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +301,7 @@
 		03BAC0D5275392DB00A34E9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				039FCC5A2779FBE6007AD9D8 /* ObserverVC */,
 				0339BB112771F13000189098 /* SigletonVC */,
 				030F6309276137070069425F /* News */,
 				03F0462627613424000DBC23 /* LaunchScreen */,
@@ -465,6 +476,7 @@
 			files = (
 				03370CA02757ABF40056B659 /* BigUsersGalleryVC.swift in Sources */,
 				03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */,
+				039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */,
 				03BAC0FB2753CE2D00A34E9C /* UserGroupVC+DataSource.swift in Sources */,
 				030F630B276137130069425F /* NewsViewController.swift in Sources */,
 				035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */,
