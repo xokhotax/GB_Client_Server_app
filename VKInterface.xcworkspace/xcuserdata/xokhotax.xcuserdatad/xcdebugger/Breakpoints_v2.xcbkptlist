@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5B00D0ED-1A0B-497E-99E0-944AF6FAA743"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFBA449F-C291-4F13-86CD-10BAA1571F39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKInterface/Controllers/VKLoginVC/VKLoginScreenVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "vkLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCF96A97-B46A-4177-A7CE-74B327D32F0B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKInterface/Controllers/VKLoginVC/VKLoginScreenVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "vkLogin()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCF96A97-B46A-4177-A7CE-74B327D32F0B - 7f01f30357388ce5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in VKInterface.VKLoginScreenVC.vkLogin() -&gt; ()"
+                  moduleName = "VKInterface"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xokhotax/Documents/GB_Swift_Cource-3/VKInterface/VKInterface/Controllers/VKLoginVC/VKLoginScreenVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "DCF96A97-B46A-4177-A7CE-74B327D32F0B - 7f01f30357388ce5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in VKInterface.VKLoginScreenVC.vkLogin() -&gt; ()"
+                  moduleName = "VKInterface"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xokhotax/Documents/GB_Swift_Cource-3/VKInterface/VKInterface/Controllers/VKLoginVC/VKLoginScreenVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
