@@ -28,20 +28,22 @@ class VKLoginScreenVC: UIViewController {
 //      "user_id" : "userId",
 //      "v" : "5.89"
 //    ]
-//    AF.request(url, method: .post, parameters: parameters) { [ weak self ] response in
+//    AF.request(url, parameters: parameters).responseJSON { [ weak self ] response in
 //
-//      guard let self = self else { return }
-//      let response = response
-//      debugPrint (response)
+//      guard let response = response.value,
+//            let url = URL(string: response as! String) else { return }
+//      print (response)
+//      let responseURLRequest = URLRequest(url: url)
 //      DispatchQueue.main.async {
-//        self.webView.load(response)
+//        guard let self = self else { return }
+//        self.webView.load(responseURLRequest)
 //      }
 //    }
 //  }
   
   
   // MARK: - Standart SWIFT URLComponents
-  
+//
       var urlComponents = URLComponents()
       urlComponents.scheme = "https"
       urlComponents.host = "oauth.vk.com"
@@ -59,7 +61,7 @@ class VKLoginScreenVC: UIViewController {
       let request = URLRequest(url: url)
       webView.load(request)
     }
-  
+
   private func vkFriendsOnline() {
     
     let token = Session.shared.token
