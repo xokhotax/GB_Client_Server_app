@@ -38,7 +38,7 @@ struct WeakSubscriber {
 
 class Reporter {
   
-  private lazy var subscribers : [WeakSubscriber] = []
+  private var subscribers : [WeakSubscriber] = []
   
   var counter : Int = 0
   var counterInfo = ""

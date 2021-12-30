@@ -31,7 +31,7 @@ extension VKLoginScreenVC: WKNavigationDelegate {
       }
     
     guard let token = parameters["access_token"],
-          let userId = parameters ["user_id"] else {return}
+          let userId = parameters ["user_id"] else { return }
     
     let session = Session.shared
     session.token = token

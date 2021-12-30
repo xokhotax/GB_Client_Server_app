@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 final class NewsViewController: UIViewController {
   
@@ -128,7 +130,7 @@ final class NewsViewController: UIViewController {
       URLQueryItem(name: "count", value: "3"),
       URLQueryItem(name: "v", value: "5.89")
     ]
-    vkPrintDataToConsoleSearch(urlComponents: urlComponents)
+    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
   }
   
   override func viewDidLoad() {

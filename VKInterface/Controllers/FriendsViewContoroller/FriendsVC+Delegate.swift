@@ -22,7 +22,7 @@ extension FriendsViewController: UITableViewDelegate {
                                               message: "Подтвердите удаление пользователя",
                                               preferredStyle: .actionSheet)
       
-      let actionYes = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
+      let actionYes = UIAlertAction(title: "Да", style: .default) {[ weak self ] _ in
         guard let self = self else { return }
         self.friendsArray.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
