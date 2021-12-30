@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 
-class NewsViewController: UIViewController {
+
+final class NewsViewController: UIViewController {
   
   @IBOutlet weak var firstItem: UIView!
   @IBOutlet weak var firstItemCenter: UIView!
@@ -15,8 +17,11 @@ class NewsViewController: UIViewController {
   @IBOutlet weak var secondItemCenter: UIView!
   @IBOutlet weak var thirdItem: UIView!
   @IBOutlet weak var thirdItemCenter: UIView!
+  @IBOutlet weak var singletonButton: UIButton!
+  @IBOutlet weak var groupSearch: UITextField!
+  @IBOutlet weak var groupSearchButton: UIButton!
   
-  func loadingAnimation(times: Int, counter: Int) {
+  private func loadingAnimation(times: Int, counter: Int) {
     
     let timeInteval: Double = 1
     
@@ -67,7 +72,7 @@ class NewsViewController: UIViewController {
     }
   }
   
-  func loadingAnimationKeyFrame(times: Int, counter: Int) {
+  private func loadingAnimationKeyFrame(times: Int, counter: Int) {
     let durationAnimation: CGFloat = 3
     firstItem.alpha = 0
     secondItem.alpha = 0
@@ -110,9 +115,38 @@ class NewsViewController: UIViewController {
     }
   }
   
+  private func vkGroupSearch() {
+    
+    let token = Session.shared.token
+    
+    var urlComponents = URLComponents()
+    urlComponents.scheme = "https"
+    urlComponents.host = "api.vk.com"
+    urlComponents.path = "/method/groups.search"
+    urlComponents.queryItems = [
+      URLQueryItem(name: "access_token", value: token),
+      URLQueryItem(name: "q", value: groupSearch.text),
+      URLQueryItem(name: "offset", value: "3"),
+      URLQueryItem(name: "count", value: "3"),
+      URLQueryItem(name: "v", value: "5.89")
+    ]
+    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-//    loadingAnimation(times: 5, counter: 0)
     loadingAnimationKeyFrame(times: 5, counter: 0)
   }
+  
+  @IBAction func toSingletonView(_ sender: Any) {
+  }
+  
+  @IBAction func groupSearchButton(_ sender: Any) {
+    vkGroupSearch()
+  }
+  
+  @IBAction func toObserverPatternVC(_ sender: Any) {
+  }
+  
+  
 }

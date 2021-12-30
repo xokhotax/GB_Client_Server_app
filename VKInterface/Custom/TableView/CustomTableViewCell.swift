@@ -11,9 +11,9 @@ protocol CustomTableViewCellDelegate: AnyObject {
   func pressedPicture(friend: Friends)
 }
 
-class CustomTableViewCell: UITableViewCell {
+final class CustomTableViewCell: UITableViewCell {
   
-  let blankAvatar = UIImage(named: "blankAvatar")
+  private let blankAvatar = UIImage(named: "blankAvatar")
   
   @IBOutlet weak var customNameField: UILabel!
   @IBOutlet weak var customAvatar: UIImageView!
@@ -24,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
   
   weak var  delegate: CustomTableViewCellDelegate?
   
-  var choosedFriend: Friends?
+  private var choosedFriend: Friends?
   
   override func prepareForReuse() {
     super.prepareForReuse()
@@ -62,7 +62,7 @@ class CustomTableViewCell: UITableViewCell {
   
   func configure(groups: Groups){
     customAvatar.image = blankAvatar
-    guard let avatar = groups.avatar else {return customAvatar.image = blankAvatar}
+    guard let avatar = groups.avatar else { return customAvatar.image = blankAvatar }
     customAvatar.image = UIImage(named: avatar)
     customNameField.text = groups.name
     customAvatarButton.alpha = 0
@@ -73,7 +73,7 @@ class CustomTableViewCell: UITableViewCell {
     UIView.animate(withDuration: 2,
                    animations: {[weak self] in
       guard let middleXVAlue = self?.customAvatar.frame.midX,
-              let middleYValue =  self?.customAvatar.frame.midY else {return}
+            let middleYValue = self?.customAvatar.frame.midY else { return }
       self?.customAvatar.frame = CGRect(x: middleXVAlue,
                                         y: middleYValue,
                                         width: 0,
@@ -81,10 +81,10 @@ class CustomTableViewCell: UITableViewCell {
     }, completion: { isSuccess in
       if isSuccess {
         UIView.animate(withDuration: 3,
-                       animations: {[weak self] in
-          guard let self = self else {return}
+                       animations: { [ weak self ] in
+          guard let self = self else { return }
           self.customAvatar.frame = startFrame
-        }, completion: { [weak self] isSuccess in
+        }, completion: { [ weak self ] isSuccess in
           if isSuccess, let self = self,
              let friend = self.choosedFriend {
             self.delegate?.pressedPicture(friend: friend)
@@ -94,7 +94,7 @@ class CustomTableViewCell: UITableViewCell {
     })
   }
   @IBAction func customCellButton(_ sender: Any) {
-    guard let choosedFriend = self.choosedFriend else {return}
+    guard let choosedFriend = self.choosedFriend else { return }
     self.delegate?.pressedPicture(friend: choosedFriend)
   }
 }

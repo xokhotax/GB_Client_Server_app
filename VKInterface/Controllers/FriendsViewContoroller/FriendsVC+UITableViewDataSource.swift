@@ -17,7 +17,6 @@ extension FriendsViewController: UITableViewDataSource {
     
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator,
                                                    for: indexPath) as? CustomTableViewCell else {return UITableViewCell() }
-  
     cell.configure(friends: friendsArray[indexPath.row])
     cell.delegate = self
     

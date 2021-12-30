@@ -48,6 +48,9 @@ class LoginScreenViewController: UIViewController {
   }
   
   @objc func onPressed () {
+    
+    // MARK: - Форма авторизации
+    
 //    guard let login = loginTextField.text,
 //          let password = passwordTextField.text
 //    else { return }

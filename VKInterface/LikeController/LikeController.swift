@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LikeController: UIView {
+final class LikeController: UIView {
   
   @IBOutlet weak var dislikeButton: UIButton!
   @IBOutlet weak var likeButton: UIButton!
@@ -17,9 +17,9 @@ class LikeController: UIView {
   
   private var view: UIView?
   
-  var activeLikeButtonStatus = false
-  var activeDislikeButtonStatus = false
-  var countLikes = 0
+  private var activeLikeButtonStatus = false
+  private var activeDislikeButtonStatus = false
+  private var countLikes = 0
   
   required init?(coder: NSCoder) {
     super .init(coder: coder)
@@ -29,7 +29,8 @@ class LikeController: UIView {
   private func loadFromNimb() -> UIView {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "LikeController", bundle: bundle)
-    guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {return UIView()}
+    guard let view = nib.instantiate(withOwner: self,
+                                     options: nil).first as? UIView else {return UIView()}
     return view
   }
   
@@ -41,7 +42,7 @@ class LikeController: UIView {
     addSubview(view)
   }
   
-  @IBAction func pressLikeButton(_ sender: Any) {
+  @IBAction private func pressLikeButton(_ sender: Any) {
     switch activeLikeButtonStatus {
       case true:
         UIView.transition(with: likeButton,
@@ -71,7 +72,7 @@ class LikeController: UIView {
     activeLikeButtonStatus = !activeLikeButtonStatus
   }
   
-  @IBAction func pressDislikeButton(_ sender: Any) {
+  @IBAction private func pressDislikeButton(_ sender: Any) {
     switch activeDislikeButtonStatus {
       case true:
         UIView.transition(with: dislikeButton,

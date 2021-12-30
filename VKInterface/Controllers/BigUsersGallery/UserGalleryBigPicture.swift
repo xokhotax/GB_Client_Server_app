@@ -7,20 +7,17 @@
 
 import UIKit
 
-class BigUsersGalleryVC: UIViewController {
+final class UserGalleryBigPicture: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
-
+  
   var sourceArray: [String] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     collectionView.dataSource = self
     collectionView.register(UINib(nibName: "GalleryCell", bundle: nil),
                             forCellWithReuseIdentifier: "reUseIdentificator")
-    
-    //    collectionView.delegate = self
     
     let tapGestureRecognizer = UITapGestureRecognizer(target: self,
                                                       action: #selector(tapped(_:)))

@@ -10,18 +10,12 @@ import UIKit
 @IBDesignable class GalleryCell: UICollectionViewCell {
   
   @IBOutlet weak var likeController: LikeController!
-  
   @IBOutlet weak var backgroundCellView: UIView!
   @IBOutlet weak var photoImageView: UIImageView!
- 
+  
   override func prepareForReuse() {
     super.prepareForReuse()
     photoImageView.image = nil
-  }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    
   }
   
   func configure(image: UIImage?){
