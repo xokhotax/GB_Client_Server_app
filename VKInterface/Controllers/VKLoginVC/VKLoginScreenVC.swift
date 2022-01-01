@@ -132,16 +132,16 @@ class VKLoginScreenVC: UIViewController {
       URLQueryItem(name: "order", value: "hints"),
       URLQueryItem(name: "fields", value: "photo_200_orig"),
       URLQueryItem(name: "name_case", value: "nom"),
-      URLQueryItem(name: "v", value: "5.81")
+      URLQueryItem(name: "v", value: "5.131")
     ]
-//    vkPrintDataToConsole(urlComponents: urlComponents, webView: webView)
+//        vkPrintDataToConsole(urlComponents: urlComponents, webView: webView)
     
     guard let url = urlComponents.url else { return }
     URLSession.shared.dataTask(with: url) { data,_,_ in
       guard let data = data,
-            let users = try? JSONDecoder().decode([Users].self, from: data)
-      else { return }
-      completion (users)
+            let usersArray = try? JSONDecoder().decode([Users].self, from: data) else { return }
+      completion (usersArray)
+      print (usersArray)
     }.resume()
   }
   
@@ -163,7 +163,6 @@ class VKLoginScreenVC: UIViewController {
     vkPrintDataToConsole(urlComponents: urlComponents, webView: webView)
   }
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     webView.navigationDelegate = self
@@ -183,6 +182,7 @@ class VKLoginScreenVC: UIViewController {
     }
     
     //    vkGroupList()
+    
   }
 }
 
