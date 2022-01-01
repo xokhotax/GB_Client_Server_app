@@ -18,7 +18,7 @@ class FriendsViewController: UIViewController {
   let toGallerySeague = "toGallerySeague"
   var friendsArray = [Friends]()
 
-  let friendsData = FriendsData.shared.sourceFriendsArray
+//  let friendsData = FriendsData.shared.sourceFriendsArray
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,8 +32,8 @@ class FriendsViewController: UIViewController {
                                            selector: #selector(addNewUser(_ :)),
                                            name: Notification.Name("addNewUserButton"),
                                            object: nil)
-    FriendsData.shared.fillFriendsData()
-    friendsArray = FriendsData.shared.sourceFriendsArray
+//    FriendsData.shared.fillFriendsData()
+//    friendsArray = FriendsData.shared.sourceFriendsArray
     tableView.reloadData()
   }
   

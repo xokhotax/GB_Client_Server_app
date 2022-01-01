@@ -32,6 +32,7 @@
 		033F1FC92741037000C20077 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FC82741037000C20077 /* pngwing.com.png */; };
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
+		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
 		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
@@ -92,9 +93,10 @@
 		033F1FC82741037000C20077 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
 		035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+NavigationControllerDeligate.swift"; sourceTree = "<group>"; };
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
+		03531138278037EE00092ED0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
-		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; };
+		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
 		03BAC0D22753927B00A34E9C /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				03BAC0E827539A4D00A34E9C /* Groups.swift */,
 				031AE0A9275EA28B0036A9C3 /* Constants.swift */,
 				0339BB142771F1DA00189098 /* Session.swift */,
+				03531138278037EE00092ED0 /* Users.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				03BAC0FD2753CE3C00A34E9C /* UserGroupVC+Deligate.swift in Sources */,
 				03BAC0E4275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift in Sources */,
 				0339BB152771F1DA00189098 /* Session.swift in Sources */,
+				03531139278037EE00092ED0 /* Users.swift in Sources */,
 				03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */,
 				03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */,
 				03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */,

@@ -8,6 +8,6 @@ target 'VKInterface' do
   # Pods for VKInterface
 
 pod 'Alamofire', '~> 5.5'
-pod 'Moya', '~> 15.0'
+# pod 'Moya', '~> 15.0'
 
 end

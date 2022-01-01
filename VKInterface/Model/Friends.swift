@@ -5,7 +5,10 @@
 //  Created by Ivan Okhota on 28.11.2021.
 //
 
-struct Friends {
+import Foundation
+
+// MARK: Offline
+struct Friends: Codable {
   var name: String
   var surname: String?
   var avatar: String?
@@ -17,14 +20,14 @@ protocol FriendsDataLoad: AnyObject {
 }
 
 class FriendsData {
-  
+
   static let shared = FriendsData()
   private init() {}
-  
+
   var sourceFriendsArray = [Friends]()
-  
+
   weak var delegate: FriendsDataLoad?
-  
+
   func fillFriendsData() {
     let friendOne = Friends(name: "Вася",
                             surname: "Попов",
@@ -46,3 +49,5 @@ class FriendsData {
     sourceFriendsArray.append(friendThree)
   }
 }
+
+
