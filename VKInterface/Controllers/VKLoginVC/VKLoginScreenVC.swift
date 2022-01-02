@@ -13,7 +13,8 @@ class VKLoginScreenVC: UIViewController {
   @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var scrollView: UIScrollView!
   
-  var usersArray = [Users]()
+ 
+  
   
   private func vkLogin() {
     
@@ -98,53 +99,6 @@ class VKLoginScreenVC: UIViewController {
     vkPrintDataToConsole(urlComponents: urlComponents, webView: webView)
   }
   
-  private func vkFriendsList(_ completion: @escaping ([Users]) -> Void) {
-    
-    let userId = Session.shared.userId
-    let token = Session.shared.token
-    //    let host = "https://api.vk.com"
-    //    let path = "/method/friends.get"
-    //
-    //    let url = URL(string: host + path)!
-    //    let parameters = [
-    //      "access_token" : token,
-    //      "owner_id" : userId,
-    //      "order" : "hints",
-    //      "count" : "0",
-    //      "ofset" : "0",
-    //      "fields" : "photo_200_orig",
-    //      "name_case" : "nom",
-    //      "v" : "5.81"
-    //    ]
-    //
-    //    AF.request(url, parameters: parameters).responseDecodable{ (response: AFDataResponse<[Users]>)  in
-    //      guard let response = response.value else { return }
-    //      completion(response)
-    //    } .resume()
-    
-    var urlComponents = URLComponents()
-    urlComponents.scheme = "https"
-    urlComponents.host = "api.vk.com"
-    urlComponents.path = "/method/friends.get"
-    urlComponents.queryItems = [
-      URLQueryItem(name: "access_token", value: token),
-      URLQueryItem(name: "owner_id", value: userId),
-      URLQueryItem(name: "order", value: "hints"),
-      URLQueryItem(name: "fields", value: "photo_200_orig"),
-      URLQueryItem(name: "name_case", value: "nom"),
-      URLQueryItem(name: "v", value: "5.131")
-    ]
-//        vkPrintDataToConsole(urlComponents: urlComponents, webView: webView)
-    
-    guard let url = urlComponents.url else { return }
-    URLSession.shared.dataTask(with: url) { data,_,_ in
-      guard let data = data,
-            let usersArray = try? JSONDecoder().decode([Users].self, from: data) else { return }
-      completion (usersArray)
-      print (usersArray)
-    }.resume()
-  }
-  
   private func vkGroupList() {
     
     let userId = Session.shared.userId
@@ -176,10 +130,7 @@ class VKLoginScreenVC: UIViewController {
     //    print ("Друзья онлайн \(vkFriendsOnline())")
     //    print ("Загрузка фото \(vkPhotosLoad())")
     
-    vkFriendsList() { usersArray in
-      self.usersArray = usersArray
-      print (usersArray)
-    }
+
     
     //    vkGroupList()
     

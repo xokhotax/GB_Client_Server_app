@@ -9,14 +9,14 @@ import Foundation
 
 // MARK: - Online Users
 
-struct UsersListResponse {
+struct UsersListResponse: Codable {
   enum CodingKeys: String, CodingKey {
     case response
   }
   let response: ResponseStruct
 }
 
-extension UsersListResponse: Decodable {
+extension UsersListResponse {
   init(from decoder: Decoder) throws {
    guard let container = try? decoder.container(keyedBy: CodingKeys.self),
     let response = try? container.decode(ResponseStruct.self, forKey: .response)
@@ -25,7 +25,7 @@ extension UsersListResponse: Decodable {
   }
 }
 
-struct ResponseStruct {
+struct ResponseStruct: Codable {
   enum CodingKeys: String, CodingKey {
     case count
     case items
@@ -35,7 +35,7 @@ struct ResponseStruct {
   let items: [Users]
 }
 
-extension ResponseStruct: Decodable {
+extension ResponseStruct {
   init(from decoder: Decoder) throws {
     guard let container = try? decoder.container(keyedBy: CodingKeys.self),
           let count = try? container.decode(Int.self, forKey: .count),
@@ -46,15 +46,8 @@ extension ResponseStruct: Decodable {
   }
 }
 
-struct Users {
-  let id: Int
-  let name: String
-  let surname: String
-  let canAccessClosed: Bool
-  let isClosed: Bool
-  let avatar: URL
-  let track_code: String
-  
+struct Users: Codable {
+
   enum CodingKeys: String, CodingKey {
     case id = "id"
     case name = "first_name"
@@ -64,9 +57,19 @@ struct Users {
     case avatar = "photo_200_orig"
     case track_code = "track_code"
   }
+  
+  let id: Int
+  let name: String
+  let surname: String
+  let canAccessClosed: Bool
+  let isClosed: Bool
+  let avatar: URL
+  let track_code: String
+
+  
 }
 
-extension Users: Codable {
+extension Users {
   
   init(from decoder: Decoder) throws {
     

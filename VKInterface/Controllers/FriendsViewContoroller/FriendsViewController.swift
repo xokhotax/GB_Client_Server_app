@@ -6,19 +6,44 @@
 //
 
 import UIKit
+import Alamofire
 
 class FriendsViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var searchBarFriend: UISearchBar!
   
-  weak var delegate: FriendsDataLoad? 
+  weak var delegate: FriendsDataLoad?
   
   let cellReuseIdentificator = "cellReuseIdentificator"
   let toGallerySeague = "toGallerySeague"
   var friendsArray = [Friends]()
-
-//  let friendsData = FriendsData.shared.sourceFriendsArray
+  
+  var usersArray = [UsersListResponse]()
+  
+  private func vkFriendsList(_ completion: @escaping (UsersListResponse) -> Void ) {
+    
+    let userId = Session.shared.userId
+    let token = Session.shared.token
+    let host = "https://api.vk.com"
+    let path = "/method/friends.get"
+    
+    let url = URL(string: host + path)!
+    let parameters = [
+      "access_token" : token,
+      "owner_id" : userId,
+      "order" : "hints",
+      "fields" : "photo_200_orig",
+      "name_case" : "nom",
+      "v" : "5.131"
+    ]
+    AF.request(url, parameters: parameters).responseDecodable{ (response: AFDataResponse<UsersListResponse>)  in
+      guard let response = response.value else { return }
+      completion(response)
+    } .resume()
+  }
+  
+  ////    let friendsData = FriendsData.shared.sourceFriendsArray
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,14 +51,23 @@ class FriendsViewController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
     FriendsData.shared.delegate = self
+    
+    vkFriendsList()
+    { response in
+      
+      self.usersArray.append(response)
+      print("Финальный массив \(self.usersArray)")
+      
+    }
+    
     tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                        forCellReuseIdentifier: cellReuseIdentificator)
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(addNewUser(_ :)),
                                            name: Notification.Name("addNewUserButton"),
                                            object: nil)
-//    FriendsData.shared.fillFriendsData()
-//    friendsArray = FriendsData.shared.sourceFriendsArray
+        FriendsData.shared.fillFriendsData()
+        friendsArray = FriendsData.shared.sourceFriendsArray
     tableView.reloadData()
   }
   
