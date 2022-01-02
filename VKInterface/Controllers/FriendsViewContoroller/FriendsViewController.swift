@@ -57,7 +57,6 @@ class FriendsViewController: UIViewController {
       
       self.usersArray.append(response)
       print("Финальный массив \(self.usersArray)")
-      
     }
     
     tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
