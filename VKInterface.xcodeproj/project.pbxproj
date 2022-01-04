@@ -33,6 +33,10 @@
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
 		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
+		037E7004278451EF0093D88B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7003278451EF0093D88B /* Realm */; };
+		037E7006278451EF0093D88B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7005278451EF0093D88B /* RealmSwift */; };
+		037E7009278452140093D88B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7008278452140093D88B /* SwiftyJSON */; };
+		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
 		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
@@ -94,6 +98,7 @@
 		035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+NavigationControllerDeligate.swift"; sourceTree = "<group>"; };
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
 		03531138278037EE00092ED0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		037E700A278453C60093D88B /* NetworkServicesVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesVK.swift; sourceTree = "<group>"; };
 		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
 		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -133,6 +138,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037E7006278451EF0093D88B /* RealmSwift in Frameworks */,
+				037E7004278451EF0093D88B /* Realm in Frameworks */,
+				037E7009278452140093D88B /* SwiftyJSON in Frameworks */,
 				B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +241,7 @@
 		033F1FB32741035C00C20077 /* VKInterface */ = {
 			isa = PBXGroup;
 			children = (
-				039FCC5727760D05007AD9D8 /* GlobalFunc */,
+				039FCC5727760D05007AD9D8 /* NetworkServices */,
 				03370CA5275B9E9B0056B659 /* Extensions */,
 				033F1FB42741035C00C20077 /* AppDelegate.swift */,
 				033F1FB62741035C00C20077 /* SceneDelegate.swift */,
@@ -276,12 +284,13 @@
 			path = AddFriendsVC;
 			sourceTree = "<group>";
 		};
-		039FCC5727760D05007AD9D8 /* GlobalFunc */ = {
+		039FCC5727760D05007AD9D8 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
 				039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */,
+				037E700A278453C60093D88B /* NetworkServicesVK.swift */,
 			);
-			path = GlobalFunc;
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 		039FCC5A2779FBE6007AD9D8 /* ObserverVC */ = {
@@ -432,6 +441,11 @@
 			dependencies = (
 			);
 			name = VKInterface;
+			packageProductDependencies = (
+				037E7003278451EF0093D88B /* Realm */,
+				037E7005278451EF0093D88B /* RealmSwift */,
+				037E7008278452140093D88B /* SwiftyJSON */,
+			);
 			productName = VKInterface;
 			productReference = 033F1FB12741035C00C20077 /* VKInterface.app */;
 			productType = "com.apple.product-type.application";
@@ -460,6 +474,10 @@
 				Base,
 			);
 			mainGroup = 033F1FA82741035C00C20077;
+			packageReferences = (
+				037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 033F1FB22741035C00C20077 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -572,6 +590,7 @@
 				031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */,
 				03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */,
 				0339BB132771F15300189098 /* SingletonViewController.swift in Sources */,
+				037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */,
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */,
 				03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */,
@@ -804,6 +823,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		037E7003278451EF0093D88B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		037E7005278451EF0093D88B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		037E7008278452140093D88B /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 033F1FA92741035C00C20077 /* Project object */;
 }

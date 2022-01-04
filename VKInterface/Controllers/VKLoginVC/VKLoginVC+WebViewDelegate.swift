@@ -37,7 +37,9 @@ extension VKLoginScreenVC: WKNavigationDelegate {
     session.token = token
     session.userId = userId
     
-    decisionHandler(.cancel)
+    performSegue(withIdentifier: "fromLoginScreenToWelcomePage",
+                 sender: nil)
     
+    decisionHandler(.cancel)
   }
 }

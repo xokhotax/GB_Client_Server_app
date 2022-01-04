@@ -30,39 +30,21 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="pngwing.com" id="JXr-Ie-8IL">
                                                 <rect key="frame" x="0.0" y="6" width="414" height="113"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JnE-tG-SHQ">
-                                                <rect key="frame" x="0.0" y="135" width="414" height="621"/>
+                                                <rect key="frame" x="0.0" y="135" width="414" height="683"/>
                                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-D0-h6j">
-                                                <rect key="frame" x="132" y="772" width="150" height="30"/>
-                                                <color key="backgroundColor" red="0.2470588088" green="0.4588235021" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="LVR-9O-GgX"/>
-                                                    <constraint firstAttribute="height" constant="30" id="qH7-KF-U2w"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1P-bJ-ZJY"/>
-                                                    <action selector="loginButton:" destination="HcT-hU-LfF" eventType="touchUpInside" id="5cd-pb-KbZ"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="JnE-tG-SHQ" firstAttribute="top" secondItem="JXr-Ie-8IL" secondAttribute="bottom" constant="16" id="0Pj-AK-vrl"/>
-                                            <constraint firstAttribute="centerX" secondItem="Kvf-D0-h6j" secondAttribute="centerX" id="58F-Ei-cHb"/>
-                                            <constraint firstItem="Kvf-D0-h6j" firstAttribute="top" secondItem="JnE-tG-SHQ" secondAttribute="bottom" constant="16" id="LhT-IP-JKv"/>
-                                            <constraint firstAttribute="bottom" secondItem="Kvf-D0-h6j" secondAttribute="bottom" constant="16" id="WkE-Zs-QpS"/>
+                                            <constraint firstAttribute="bottom" secondItem="JnE-tG-SHQ" secondAttribute="bottom" id="Uz3-Av-d5P"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -461,22 +443,22 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zuq-i2-ahK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyk-zl-BYM">
-                                                <rect key="frame" x="32" y="16" width="358" height="19"/>
+                                                <rect key="frame" x="32" y="16" width="358" height="20"/>
                                                 <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmZ-lg-chP" userLabel="Surname">
-                                                <rect key="frame" x="32" y="51" width="358" height="19"/>
+                                                <rect key="frame" x="32" y="52" width="358" height="20"/>
                                                 <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-oE-Ax7">
-                                                <rect key="frame" x="134.5" y="93.5" width="145" height="31"/>
+                                                <rect key="frame" x="134.5" y="95" width="145" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Пригласить друга"/>
                                                 <connections>
@@ -484,12 +466,12 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6z-sC-03S">
-                                                <rect key="frame" x="112" y="8.5" width="278" height="34"/>
+                                                <rect key="frame" x="112" y="9" width="278" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-8p-bwE">
-                                                <rect key="frame" x="112" y="43.5" width="278" height="34"/>
+                                                <rect key="frame" x="112" y="45" width="278" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -944,13 +926,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-0n-Yeq">
-                                                <rect key="frame" x="12" y="205" width="50" height="20"/>
+                                                <rect key="frame" x="12" y="205" width="51" height="20"/>
                                                 <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите свой логин" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kKY-6L-TU1">
-                                                <rect key="frame" x="80" y="198" width="316" height="34"/>
+                                                <rect key="frame" x="81" y="198" width="315" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="TtY-QL-4Px"/>
                                                 </constraints>
@@ -958,13 +940,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-g5-8Y4">
-                                                <rect key="frame" x="12" y="255.5" width="56.5" height="19"/>
+                                                <rect key="frame" x="12" y="255" width="57.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите свой пароль" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jIf-hT-hJ6">
-                                                <rect key="frame" x="80" y="248" width="316" height="34"/>
+                                                <rect key="frame" x="81" y="248" width="315" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="jRt-F4-uII"/>
                                                 </constraints>
@@ -990,7 +972,7 @@
                                                 <rect key="frame" x="87" y="8" width="240" height="109"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Повторите попытку входа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5e-gD-ULD">
-                                                        <rect key="frame" x="20" y="45" width="200" height="19"/>
+                                                        <rect key="frame" x="18" y="44.5" width="204.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

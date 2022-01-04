@@ -9,5 +9,8 @@ target 'VKInterface' do
 
 pod 'Alamofire', '~> 5.5'
 # pod 'Moya', '~> 15.0'
+pod 'RealmSwift', '~>10'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'Alamofire-SwiftyJSON' 
 
 end
