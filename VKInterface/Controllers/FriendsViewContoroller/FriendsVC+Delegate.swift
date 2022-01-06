@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 extension FriendsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView,
@@ -39,9 +40,11 @@ extension FriendsViewController: UITableViewDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == toGallerySeague,
-       let friendsFotoArray = sender as? [String],
-       let destination = segue.destination as? GalleryViewController {
-      destination.sourceArray = friendsFotoArray
+       let pickedCell = sender as? CustomTableViewCell,
+       let cellIndexPath = tableView.indexPath(for: pickedCell),
+       let galleryViewController = segue.destination as? GalleryViewController {
+      let choosedFriend = friend?[cellIndexPath.row]
+      galleryViewController.choosedFriend = choosedFriend
     }
-  }  
+  }
 }

@@ -10,24 +10,27 @@ import UIKit
 extension UserGroupViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView,
                  numberOfRowsInSection section: Int) -> Int {
-    userGroupsArray.count
+    guard let quantity = userGroup?.count else { return 0 }
+    return quantity
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator,
-                                                   for: indexPath) as? CustomTableViewCell else {return UITableViewCell() }
-  
-    cell.configure(groups: userGroupsArray[indexPath.row])
+                                                   for: indexPath) as? CustomTableViewCell,
+          let userGroup = userGroup?[indexPath.item] else { return UITableViewCell() }
+    
+    cell.configure(groups: userGroup)
+    
     return cell
   }
   
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
+//  func numberOfSections(in tableView: UITableView) -> Int {
+//    return 1
+//  }
   
-  func tableView(_ tableView: UITableView,
-                 canEditRowAt indexPath: IndexPath) -> Bool {
-    return true
-  }
+//  func tableView(_ tableView: UITableView,
+//                 canEditRowAt indexPath: IndexPath) -> Bool {
+//    return true
+//  }
   
 }

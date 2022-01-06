@@ -61,8 +61,8 @@
                             <action selector="customCellButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RiZ-d9-wAm"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atv-p4-kYi">
-                        <rect key="frame" x="161" y="120.5" width="41.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atv-p4-kYi">
+                        <rect key="frame" x="161" y="120.5" width="253" height="20"/>
                         <fontDescription key="fontDescription" name="VKSansDisplay-Medium" family="VK Sans Display" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -72,6 +72,7 @@
                     <constraint firstItem="UfK-nL-Maa" firstAttribute="top" secondItem="D8g-6J-IIm" secondAttribute="top" id="8vm-bd-t99"/>
                     <constraint firstItem="UfK-nL-Maa" firstAttribute="centerY" secondItem="bDQ-3g-svG" secondAttribute="centerY" id="BKO-iv-2Ja"/>
                     <constraint firstItem="D8g-6J-IIm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GTU-Lj-kVc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Atv-p4-kYi" secondAttribute="trailing" constant="16" id="Qs5-C6-ufe"/>
                     <constraint firstItem="UfK-nL-Maa" firstAttribute="leading" secondItem="D8g-6J-IIm" secondAttribute="trailing" id="ReE-k2-Dud"/>
                     <constraint firstItem="D8g-6J-IIm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="icG-F5-gq7"/>
                     <constraint firstItem="UfK-nL-Maa" firstAttribute="bottom" secondItem="D8g-6J-IIm" secondAttribute="bottom" id="lsJ-wB-iIN"/>

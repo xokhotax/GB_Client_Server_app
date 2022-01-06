@@ -67,17 +67,17 @@ class AddFriendViewController: UIViewController {
     NotificationCenter.default.removeObserver(self)
   }
   
-  @IBAction func addNewUser(_ sender: Any) {
-    
-    guard let newUserName = newUserName.text,
-          let newUserSurname = newUserSurname.text
-    else { return }
-    
-    let newAddFriendData = Friends(name: newUserName, surname: newUserSurname, avatar: nil)
-    
-    NotificationCenter.default.post(name: Notification.Name("addNewUserButton"),
-                                    object: newAddFriendData)
-    
-    self.view.endEditing(true)
-  }
+//  @IBAction func addNewUser(_ sender: Any) {
+//    
+//    guard let newUserName = newUserName.text,
+//          let newUserSurname = newUserSurname.text
+//    else { return }
+//    
+//    let newAddFriendData = Friends(name: newUserName, surname: newUserSurname, avatar: nil)
+//    
+//    NotificationCenter.default.post(name: Notification.Name("addNewUserButton"),
+//                                    object: newAddFriendData)
+//    
+//    self.view.endEditing(true)
+//  }
 }
