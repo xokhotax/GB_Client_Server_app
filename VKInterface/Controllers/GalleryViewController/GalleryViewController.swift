@@ -28,23 +28,33 @@ class GalleryViewController: UIViewController {
 
   
   private func inputDataToSwipeGalleryImage() {
-    guard let choosedFriend = choosedFriend else { return }
-    let friendId = choosedFriend.friendId
-    networkServices.VKFriendloadPhoto(owner: friendId, completion: { result in
+
+    let friendId = String(describing: Session.shared.friendId)
+  
+    networkServices.VKFriendloadPhoto(friendId: friendId, completion: { result in
       switch result {
       case let .failure(error):
           print(error)
       case let .success(photo):
           let sourceArrayNew: [Photo] = photo
           self.sourceArray = sourceArrayNew
+          
+//          print(self.choosedFriend)
+          
           self.collectionView.reloadData()
+          
+          print(self.sourceArray[0])
       }
   })
-      
+    
+//    func addFirstPhoto(with friends: [Photo]) {
+//      let sourceArray: [Photo] = [Photo]
+//      swipeGalleryImage.kf.setImage(with: )
+//    }
     
     
-//    guard let transferedGallery = UIImage(named: sourceArray[sourceArrayCounter]) else { return }
-//    swipeGalleryImage.kf.setImage(with: friends.iconUrl)
+//    guard let transferedGallery = UIImage(named: sourceArray[sourceArrayCounter) else { return }
+//    swipeGalleryImage.kf.setImage(with: friendImage.iconUrl)
 //    swipeGallerySecondImage.image = transferedGallery
   }
   
@@ -113,6 +123,9 @@ class GalleryViewController: UIViewController {
     self.view.addGestureRecognizer(gestureRecognizer)
     
     collectionView.reloadData()
+    
+    
+
     
   }
 }

@@ -42,9 +42,12 @@ extension FriendsViewController: UITableViewDelegate {
     if segue.identifier == toGallerySeague,
        let pickedCell = sender as? CustomTableViewCell,
        let cellIndexPath = tableView.indexPath(for: pickedCell),
-       let galleryViewController = segue.destination as? GalleryViewController {
-      let choosedFriend = friend?[cellIndexPath.row]
+    let galleryViewController = segue.destination as? GalleryViewController {
+      let choosedFriend = friend?[cellIndexPath.item]
+      guard let choosedFriend = choosedFriend else { return }
+      
       galleryViewController.choosedFriend = choosedFriend
+      Session.shared.friendId = choosedFriend 
     }
   }
 }

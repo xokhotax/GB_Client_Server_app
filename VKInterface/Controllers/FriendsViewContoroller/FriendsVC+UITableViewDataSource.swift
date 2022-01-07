@@ -28,8 +28,8 @@ extension FriendsViewController: UITableViewDataSource {
 }
 
 extension FriendsViewController: CustomTableViewCellDelegate {
-  func pressedPicture(friend: Friends) {
-    performSegue(withIdentifier: toGallerySeague, sender: Friends.self)
+  func pressedPicture(choosedFriend: Friends) {
+    performSegue(withIdentifier: toGallerySeague, sender: choosedFriend)
     
   }
 }

@@ -10,7 +10,7 @@ import Kingfisher
 
 
 protocol CustomTableViewCellDelegate: AnyObject {
-  func pressedPicture(friend: Friends)
+  func pressedPicture(choosedFriend: Friends)
 }
 
 final class CustomTableViewCell: UITableViewCell {
@@ -24,7 +24,7 @@ final class CustomTableViewCell: UITableViewCell {
   @IBOutlet weak var ContentView: UIView!
   @IBOutlet weak var customCellButton: UIButton!
   
-  weak var  delegate: CustomTableViewCellDelegate?
+  weak var delegate: CustomTableViewCellDelegate?
   
   var choosedFriend: Friends?
   
@@ -80,15 +80,18 @@ final class CustomTableViewCell: UITableViewCell {
           self.customAvatar.frame = startFrame
         }, completion: { [ weak self ] isSuccess in
           if isSuccess, let self = self,
-             let friend = self.choosedFriend {
-            self.delegate?.pressedPicture(friend: friend)
+             let choosedFriend = self.choosedFriend {
+            self.delegate?.pressedPicture(choosedFriend: choosedFriend)
+            Session.shared.friendId = choosedFriend.friendId
           }
         })
       }
     })
   }
+  
   @IBAction func customCellButton(_ sender: Any) {
-    guard let friend = self.choosedFriend else { return }
-    self.delegate?.pressedPicture(friend: friend)
+    guard let choosedFriend = self.choosedFriend else { return }
+    self.delegate?.pressedPicture(choosedFriend: choosedFriend)
+    Session.shared.friendId = choosedFriend.friendId
   }
 }

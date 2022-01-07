@@ -17,7 +17,6 @@ class NetworkServices {
   private let host = "https://api.vk.com"
   private let version = "5.131"
   
-  
   func vkFriendsList(_ completion: @escaping (Result<[Friends], Error>) -> Void ) {
     
     let path = "/method/friends.get"
@@ -48,32 +47,6 @@ class NetworkServices {
   
   func vkLogin() -> URLRequest {
     
-    
-    // MARK: - Alamofire
-    //
-    //    let url = URL(string: "https://oauth.vk.com/authorize")!
-    //    let parameters = [
-    //      "client_id" : "8034847",
-    //      "display" : "mobile",
-    //      "redirect_uri": "https://oauth.vk.com/blank.html",
-    //      "scope" : "262150",
-    //      "response_type" : "token",
-    //      "user_id" : "userId",
-    //      "v" : "5.89"
-    //    ]
-    //    AF.request(url, parameters: parameters).responseJSON { [ weak self ] response in
-    //
-    //      guard let response = response.value,
-    //            let url = URL(string: response as! String) else { return }
-    //      print (response)
-    //      let responseURLRequest = URLRequest(url: url)
-    //      DispatchQueue.main.async {
-    //        guard let self = self else { return }
-    //        self.webView.load(responseURLRequest)
-    //      }
-    //    }
-    //  }
-    
     // MARK: - Standart SWIFT URLComponents
     //
     var urlComponents = URLComponents()
@@ -87,7 +60,7 @@ class NetworkServices {
       URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
       URLQueryItem(name: "response_type", value: "token"),
       URLQueryItem(name: "user_id", value: "userId"),
-      URLQueryItem(name: "v", value: version)
+      URLQueryItem(name: "v", value: "5.92")
       
     ]
     let errorURL = URL(string: "https://oauth.vk.com/blank.html")!
@@ -128,27 +101,27 @@ class NetworkServices {
   func vkGroupList(completion: @escaping (Result<[Groups], Error>) -> Void) {
     let path = "/method/groups.get"
     let parameters: Parameters = [
-        "access_token": token,
-        "extended": 1,
-        "v": version
+      "access_token": token,
+      "extended": 1,
+      "v": version
     ]
     
     AF.request(host + path, parameters: parameters).response {
-        response in
-        switch response.result {
+      response in
+      switch response.result {
         case .failure(let error):
-            completion(.failure(error))
+          completion(.failure(error))
         case .success(let data):
-            guard let data = data,
-                  let json = try? JSON(data: data) else { return }
+          guard let data = data,
+                let json = try? JSON(data: data) else { return }
           
-            let groupsJson = json["response"]["items"].arrayValue
-            let groups = groupsJson.map { Groups(json: $0) }
-            
-            completion(.success(groups))
-        }
+          let groupsJson = json["response"]["items"].arrayValue
+          let groups = groupsJson.map { Groups(json: $0) }
+          
+          completion(.success(groups))
+      }
     }
-}
+  }
   
   func vkFriendsSearch(search: String = "", completion: @escaping (Result<[Friends], Error>) -> Void ) {
     
@@ -180,33 +153,51 @@ class NetworkServices {
       }
   }
   
-  func VKFriendloadPhoto(owner: String, completion: @escaping (Result<[Photo], Error>) -> Void) {
-  let path = "/method/photos.get"
-  let parameters: Parameters = [
+  func VKFriendloadPhoto(friendId: String, completion: @escaping (Result<[Photo], Error>) -> Void) {
+    let path = "/method/photos.get"
+    let parameters: Parameters = [
       "access_token": token,
       "extended": 1,
-      "v": "5.131",
-      "owner_id": owner,
+      "v": version,
+      "owner_id": friendId,
       "album_id": "profile",
       "photo_sizes": 1
-  ]
-  
-  AF.request(host + path, parameters: parameters).response {
+    ]
+    
+    AF.request(host + path, parameters: parameters).response {
       response in
       switch response.result {
-      case .failure(let error):
+        case .failure(let error):
           completion(.failure(error))
-      case .success(let data):
+        case .success(let data):
           guard let data = data,
                 let json = try? JSON(data: data) else { return }
           
-   
+          
           let friendPhotoJson = json["response"]["items"].arrayValue
           let friendPhoto = friendPhotoJson.map { Photo(json: $0) }
-
+          
           completion(.success(friendPhoto))
       }
+    }
   }
-}
+  
+  func vkGroupSearch(searchText: String) {
+    
+    let token = Session.shared.token
+    
+    var urlComponents = URLComponents()
+    urlComponents.scheme = "https"
+    urlComponents.host = "api.vk.com"
+    urlComponents.path = "/method/groups.search"
+    urlComponents.queryItems = [
+      URLQueryItem(name: "access_token", value: token),
+      URLQueryItem(name: "q", value: searchText),
+      URLQueryItem(name: "offset", value: "3"),
+      URLQueryItem(name: "count", value: "3"),
+      URLQueryItem(name: "v", value: version)
+    ]
+    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
+  }
   
 }

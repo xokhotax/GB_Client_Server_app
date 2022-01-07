@@ -48,9 +48,6 @@ class UserGroupViewController: UIViewController {
     self.navigationController?.delegate = self
     
     //    fillUserGroupData()
-    
-   
-    
   }
   
   //  func fillUserGroupData() {
