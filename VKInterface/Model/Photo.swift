@@ -9,13 +9,13 @@ import UIKit
 import SwiftyJSON
 import RealmSwift
 
-class Photo {
+class Photo: Object {
 
-    private let url: String
-    var iconUrl: URL? { URL(string: "\(url)")}
+  @objc dynamic var url: String = ""
+  @objc dynamic var iconUrl: URL? { URL(string: "\(url)") }
     
-    init(json: JSON) {
-
+  convenience init(json: SwiftyJSON.JSON) {
+        self.init()
         let firstJson = json["sizes"].arrayValue.first
         self.url = firstJson?["url"].stringValue ?? ""
     }
