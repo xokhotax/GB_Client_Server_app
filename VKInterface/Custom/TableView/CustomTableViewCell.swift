@@ -55,8 +55,6 @@ final class CustomTableViewCell: UITableViewCell {
   }
   
   func configure(groups: Groups){
-//    customAvatar.image = blankAvatar
-//    guard let avatar = groups.avatar else { return customAvatar.image = blankAvatar }
     customAvatar.kf.setImage(with: groups.avatar)
     customNameField.text = groups.name
     customAvatarButton.alpha = 0
