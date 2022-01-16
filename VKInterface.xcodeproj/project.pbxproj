@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		030F630B276137130069425F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F630A276137130069425F /* NewsViewController.swift */; };
-		031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */; };
 		031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A1275CD7670036A9C3 /* LikeController.swift */; };
 		031AE0A6275CE8F00036A9C3 /* LikeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031AE0A5275CE8F00036A9C3 /* LikeController.xib */; };
-		031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A9275EA28B0036A9C3 /* Constants.swift */; };
 		03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C8C2756AE220056B659 /* GalleryViewController.swift */; };
 		03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C912756AF990056B659 /* GalleryVC+SourceData.swift */; };
 		03370C962756B1650056B659 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C942756B1650056B659 /* GalleryCell.swift */; };
@@ -21,32 +19,32 @@
 		03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370C9F2757ABF40056B659 /* UserGalleryBigPicture.swift */; };
 		03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03370CA12757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift */; };
 		0339BB132771F15300189098 /* SingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB122771F15300189098 /* SingletonViewController.swift */; };
-		0339BB152771F1DA00189098 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB142771F1DA00189098 /* Session.swift */; };
-		0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */; };
 		033F1FB52741035C00C20077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB42741035C00C20077 /* AppDelegate.swift */; };
 		033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB62741035C00C20077 /* SceneDelegate.swift */; };
 		033F1FB92741035C00C20077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F1FB82741035C00C20077 /* ViewController.swift */; };
 		033F1FBC2741035C00C20077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FBA2741035C00C20077 /* Main.storyboard */; };
 		033F1FBE2741035C00C20077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FBD2741035C00C20077 /* Assets.xcassets */; };
 		033F1FC12741035C00C20077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FBF2741035C00C20077 /* LaunchScreen.storyboard */; };
-		033F1FC92741037000C20077 /* pngwing.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F1FC82741037000C20077 /* pngwing.com.png */; };
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
-		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
-		037E7004278451EF0093D88B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7003278451EF0093D88B /* Realm */; };
-		037E7006278451EF0093D88B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7005278451EF0093D88B /* RealmSwift */; };
-		037E7009278452140093D88B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7008278452140093D88B /* SwiftyJSON */; };
 		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
+		0393725E27942FCE004C23A1 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0393725D27942FCE004C23A1 /* RealmServices.swift */; };
+		0393726027942FF3004C23A1 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0393725F27942FF3004C23A1 /* vkprintDataToConsole.swift */; };
+		03937267279430D0004C23A1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937261279430D0004C23A1 /* Photo.swift */; };
+		03937268279430D0004C23A1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937262279430D0004C23A1 /* Session.swift */; };
+		03937269279430D0004C23A1 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937263279430D0004C23A1 /* Users.swift */; };
+		0393726A279430D0004C23A1 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937264279430D0004C23A1 /* Friends.swift */; };
+		0393726B279430D0004C23A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937265279430D0004C23A1 /* Constants.swift */; };
+		0393726C279430D0004C23A1 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03937266279430D0004C23A1 /* Groups.swift */; };
+		0393727B2794334A004C23A1 /* Pods_VKInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */; };
+		0393727F2794335E004C23A1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0393727E2794335E004C23A1 /* SwiftyJSON */; };
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
-		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
 		039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */; };
 		03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0D22753927B00A34E9C /* FriendsViewController.swift */; };
 		03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */; };
 		03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */; };
 		03BAC0E4275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0E3275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift */; };
-		03BAC0E7275399C500A34E9C /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0E6275399C500A34E9C /* Friends.swift */; };
-		03BAC0E927539A4D00A34E9C /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0E827539A4D00A34E9C /* Groups.swift */; };
 		03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0EA27539E9F00A34E9C /* FriendsVC+Delegate.swift */; };
 		03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0EE2753B99A00A34E9C /* AddFriendViewController.swift */; };
 		03BAC0F52753CD5E00A34E9C /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0F42753CD5E00A34E9C /* UserGroupViewController.swift */; };
@@ -56,25 +54,19 @@
 		03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0FE2753D1C100A34E9C /* AllGroupsVC+DataSource.swift */; };
 		03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC1002753D1D000A34E9C /* AllGroupsVC+Deligate.swift */; };
 		03C7106D27410AC20000159F /* VK Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7106C27410AC20000159F /* VK Sans.ttf */; };
-		03C71078274122AA0000159F /* 60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71071274122A90000159F /* 60x60.png */; };
-		03C71079274122AA0000159F /* 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71072274122A90000159F /* 40x40.png */; };
-		03C7107A274122AA0000159F /* 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71073274122A90000159F /* 58x58.png */; };
-		03C7107B274122AA0000159F /* 180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71074274122AA0000159F /* 180x180.png */; };
-		03C7107C274122AA0000159F /* 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71075274122AA0000159F /* 120x120.png */; };
-		03C7107D274122AA0000159F /* 87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71076274122AA0000159F /* 87x87.png */; };
-		03C7107E274122AA0000159F /* 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C71077274122AA0000159F /* 80x80.png */; };
-		03C71080274124620000159F /* 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C7107F274124620000159F /* 1024x1024.png */; };
 		03C7108227412DB70000159F /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7108127412DB70000159F /* LoginScreenViewController.swift */; };
+		03CEE6192794399300B2CF34 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 03CEE6182794399300B2CF34 /* Realm */; };
+		03CEE61B2794399300B2CF34 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03CEE61A2794399300B2CF34 /* RealmSwift */; };
+		03DBFAF627942BB30088F34E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03DBFAF527942BB30088F34E /* Alamofire */; };
+		03DBFAF927942BCE0088F34E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 03DBFAF827942BCE0088F34E /* Kingfisher */; };
+		03EFDBF32794376A0032A6D3 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EFDBF22794376A0032A6D3 /* UIImage+Resize.swift */; };
 		03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */; };
-		B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030F630A276137130069425F /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		031AE0A1275CD7670036A9C3 /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
 		031AE0A5275CE8F00036A9C3 /* LikeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeController.xib; sourceTree = "<group>"; };
-		031AE0A9275EA28B0036A9C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		03370C8C2756AE220056B659 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		03370C912756AF990056B659 /* GalleryVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryVC+SourceData.swift"; sourceTree = "<group>"; };
 		03370C942756B1650056B659 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
@@ -84,8 +76,6 @@
 		03370C9F2757ABF40056B659 /* UserGalleryBigPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGalleryBigPicture.swift; sourceTree = "<group>"; };
 		03370CA12757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGalleryBigPictureVC+SourceData.swift"; sourceTree = "<group>"; };
 		0339BB122771F15300189098 /* SingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonViewController.swift; sourceTree = "<group>"; };
-		0339BB142771F1DA00189098 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+FriendsDelegate.swift"; sourceTree = "<group>"; };
 		033F1FB12741035C00C20077 /* VKInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033F1FB42741035C00C20077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033F1FB62741035C00C20077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,21 +84,24 @@
 		033F1FBD2741035C00C20077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033F1FC02741035C00C20077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033F1FC22741035C00C20077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		033F1FC82741037000C20077 /* pngwing.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngwing.com.png; sourceTree = "<group>"; };
 		035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+NavigationControllerDeligate.swift"; sourceTree = "<group>"; };
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
-		03531138278037EE00092ED0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		037E700A278453C60093D88B /* NetworkServicesVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesVK.swift; sourceTree = "<group>"; };
+		0393725D27942FCE004C23A1 /* RealmServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
+		0393725F27942FF3004C23A1 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; };
+		03937261279430D0004C23A1 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		03937262279430D0004C23A1 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		03937263279430D0004C23A1 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		03937264279430D0004C23A1 /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		03937265279430D0004C23A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03937266279430D0004C23A1 /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
-		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
 		03BAC0D22753927B00A34E9C /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		03BAC0DF2753940100A34E9C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		03BAC0E02753940100A34E9C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		03BAC0E3275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		03BAC0E6275399C500A34E9C /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
-		03BAC0E827539A4D00A34E9C /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		03BAC0EA27539E9F00A34E9C /* FriendsVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+Delegate.swift"; sourceTree = "<group>"; };
 		03BAC0EE2753B99A00A34E9C /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		03BAC0F42753CD5E00A34E9C /* UserGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
@@ -118,15 +111,8 @@
 		03BAC0FE2753D1C100A34E9C /* AllGroupsVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsVC+DataSource.swift"; sourceTree = "<group>"; };
 		03BAC1002753D1D000A34E9C /* AllGroupsVC+Deligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsVC+Deligate.swift"; sourceTree = "<group>"; };
 		03C7106C27410AC20000159F /* VK Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VK Sans.ttf"; sourceTree = "<group>"; };
-		03C71071274122A90000159F /* 60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 60x60.png; sourceTree = "<group>"; };
-		03C71072274122A90000159F /* 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40x40.png; sourceTree = "<group>"; };
-		03C71073274122A90000159F /* 58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58x58.png; sourceTree = "<group>"; };
-		03C71074274122AA0000159F /* 180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180x180.png; sourceTree = "<group>"; };
-		03C71075274122AA0000159F /* 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120x120.png; sourceTree = "<group>"; };
-		03C71076274122AA0000159F /* 87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 87x87.png; sourceTree = "<group>"; };
-		03C71077274122AA0000159F /* 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80x80.png; sourceTree = "<group>"; };
-		03C7107F274124620000159F /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
 		03C7108127412DB70000159F /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		03EFDBF22794376A0032A6D3 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+SearchBar+Delegate.swift"; sourceTree = "<group>"; };
 		550884F0547CBF9BFE06C9A5 /* Pods-VKInterface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKInterface.release.xcconfig"; path = "Target Support Files/Pods-VKInterface/Pods-VKInterface.release.xcconfig"; sourceTree = "<group>"; };
 		60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,10 +124,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				037E7006278451EF0093D88B /* RealmSwift in Frameworks */,
-				037E7004278451EF0093D88B /* Realm in Frameworks */,
-				037E7009278452140093D88B /* SwiftyJSON in Frameworks */,
-				B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */,
+				03CEE61B2794399300B2CF34 /* RealmSwift in Frameworks */,
+				0393727F2794335E004C23A1 /* SwiftyJSON in Frameworks */,
+				03DBFAF927942BCE0088F34E /* Kingfisher in Frameworks */,
+				03DBFAF627942BB30088F34E /* Alamofire in Frameworks */,
+				0393727B2794334A004C23A1 /* Pods_VKInterface.framework in Frameworks */,
+				03CEE6192794399300B2CF34 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,14 +192,6 @@
 			path = BigUsersGallery;
 			sourceTree = "<group>";
 		};
-		03370CA5275B9E9B0056B659 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		0339BB112771F13000189098 /* SigletonVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +221,8 @@
 		033F1FB32741035C00C20077 /* VKInterface */ = {
 			isa = PBXGroup;
 			children = (
+				03EFDBF1279437300032A6D3 /* Extensions */,
 				039FCC5727760D05007AD9D8 /* NetworkServices */,
-				03370CA5275B9E9B0056B659 /* Extensions */,
 				033F1FB42741035C00C20077 /* AppDelegate.swift */,
 				033F1FB62741035C00C20077 /* SceneDelegate.swift */,
 				033F1FB82741035C00C20077 /* ViewController.swift */,
@@ -252,7 +232,6 @@
 				030F630C2764D63C0069425F /* Custom */,
 				03BAC0D5275392DB00A34E9C /* Controllers */,
 				033F1FBD2741035C00C20077 /* Assets.xcassets */,
-				03C7107027410AF50000159F /* Images */,
 				033F1FC22741035C00C20077 /* Info.plist */,
 				03C7106F27410AE80000159F /* Fonts */,
 			);
@@ -287,7 +266,8 @@
 		039FCC5727760D05007AD9D8 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
-				039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */,
+				0393725F27942FF3004C23A1 /* vkprintDataToConsole.swift */,
+				0393725D27942FCE004C23A1 /* RealmServices.swift */,
 				037E700A278453C60093D88B /* NetworkServicesVK.swift */,
 			);
 			path = NetworkServices;
@@ -308,7 +288,6 @@
 				03BAC0E3275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift */,
 				03BAC0EA27539E9F00A34E9C /* FriendsVC+Delegate.swift */,
 				03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */,
-				0339BB182771FCDD00189098 /* FriendsVC+FriendsDelegate.swift */,
 			);
 			path = FriendsViewContoroller;
 			sourceTree = "<group>";
@@ -344,11 +323,12 @@
 		03BAC0E5275399AD00A34E9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				03BAC0E6275399C500A34E9C /* Friends.swift */,
-				03BAC0E827539A4D00A34E9C /* Groups.swift */,
-				031AE0A9275EA28B0036A9C3 /* Constants.swift */,
-				0339BB142771F1DA00189098 /* Session.swift */,
-				03531138278037EE00092ED0 /* Users.swift */,
+				03937265279430D0004C23A1 /* Constants.swift */,
+				03937264279430D0004C23A1 /* Friends.swift */,
+				03937266279430D0004C23A1 /* Groups.swift */,
+				03937261279430D0004C23A1 /* Photo.swift */,
+				03937262279430D0004C23A1 /* Session.swift */,
+				03937263279430D0004C23A1 /* Users.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,20 +362,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		03C7107027410AF50000159F /* Images */ = {
+		03EFDBF1279437300032A6D3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				03C71072274122A90000159F /* 40x40.png */,
-				03C71073274122A90000159F /* 58x58.png */,
-				03C71071274122A90000159F /* 60x60.png */,
-				03C71077274122AA0000159F /* 80x80.png */,
-				03C71076274122AA0000159F /* 87x87.png */,
-				03C71075274122AA0000159F /* 120x120.png */,
-				03C71074274122AA0000159F /* 180x180.png */,
-				03C7107F274124620000159F /* 1024x1024.png */,
-				033F1FC82741037000C20077 /* pngwing.com.png */,
+				03EFDBF22794376A0032A6D3 /* UIImage+Resize.swift */,
 			);
-			path = Images;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		03F0462627613424000DBC23 /* LaunchScreen */ = {
@@ -442,9 +414,11 @@
 			);
 			name = VKInterface;
 			packageProductDependencies = (
-				037E7003278451EF0093D88B /* Realm */,
-				037E7005278451EF0093D88B /* RealmSwift */,
-				037E7008278452140093D88B /* SwiftyJSON */,
+				03DBFAF527942BB30088F34E /* Alamofire */,
+				03DBFAF827942BCE0088F34E /* Kingfisher */,
+				0393727E2794335E004C23A1 /* SwiftyJSON */,
+				03CEE6182794399300B2CF34 /* Realm */,
+				03CEE61A2794399300B2CF34 /* RealmSwift */,
 			);
 			productName = VKInterface;
 			productReference = 033F1FB12741035C00C20077 /* VKInterface.app */;
@@ -475,8 +449,10 @@
 			);
 			mainGroup = 033F1FA82741035C00C20077;
 			packageReferences = (
-				037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */,
-				037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				03937273279432D4004C23A1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				03CEE6172794399300B2CF34 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 033F1FB22741035C00C20077 /* Products */;
 			projectDirPath = "";
@@ -492,21 +468,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C7107E274122AA0000159F /* 80x80.png in Resources */,
 				033F1FC12741035C00C20077 /* LaunchScreen.storyboard in Resources */,
-				033F1FC92741037000C20077 /* pngwing.com.png in Resources */,
-				03C7107C274122AA0000159F /* 120x120.png in Resources */,
-				03C71078274122AA0000159F /* 60x60.png in Resources */,
 				033F1FBE2741035C00C20077 /* Assets.xcassets in Resources */,
 				03C7106D27410AC20000159F /* VK Sans.ttf in Resources */,
-				03C71080274124620000159F /* 1024x1024.png in Resources */,
 				03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */,
 				031AE0A6275CE8F00036A9C3 /* LikeController.xib in Resources */,
-				03C71079274122AA0000159F /* 40x40.png in Resources */,
 				03370C972756B1660056B659 /* GalleryCell.xib in Resources */,
-				03C7107A274122AA0000159F /* 58x58.png in Resources */,
-				03C7107D274122AA0000159F /* 87x87.png in Resources */,
-				03C7107B274122AA0000159F /* 180x180.png in Resources */,
 				033F1FBC2741035C00C20077 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,28 +528,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */,
+				03937267279430D0004C23A1 /* Photo.swift in Sources */,
 				03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */,
+				0393726A279430D0004C23A1 /* Friends.swift in Sources */,
 				039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */,
 				03BAC0FB2753CE2D00A34E9C /* UserGroupVC+DataSource.swift in Sources */,
 				030F630B276137130069425F /* NewsViewController.swift in Sources */,
 				035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */,
+				0393725E27942FCE004C23A1 /* RealmServices.swift in Sources */,
 				033F1FB92741035C00C20077 /* ViewController.swift in Sources */,
 				03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */,
-				031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */,
-				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
-				0339BB192771FCDD00189098 /* FriendsVC+FriendsDelegate.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
-				03BAC0E7275399C500A34E9C /* Friends.swift in Sources */,
 				039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */,
 				03BAC0F52753CD5E00A34E9C /* UserGroupViewController.swift in Sources */,
 				03BAC0F72753CD6C00A34E9C /* AllGroupsViewController.swift in Sources */,
 				033F1FB52741035C00C20077 /* AppDelegate.swift in Sources */,
+				0393726027942FF3004C23A1 /* vkprintDataToConsole.swift in Sources */,
 				03C7108227412DB70000159F /* LoginScreenViewController.swift in Sources */,
 				03BAC0FD2753CE3C00A34E9C /* UserGroupVC+Deligate.swift in Sources */,
 				03BAC0E4275397ED00A34E9C /* FriendsVC+UITableViewDataSource.swift in Sources */,
-				0339BB152771F1DA00189098 /* Session.swift in Sources */,
-				03531139278037EE00092ED0 /* Users.swift in Sources */,
+				03937269279430D0004C23A1 /* Users.swift in Sources */,
+				0393726B279430D0004C23A1 /* Constants.swift in Sources */,
 				03BAC0EB27539E9F00A34E9C /* FriendsVC+Delegate.swift in Sources */,
 				03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */,
 				03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */,
@@ -591,15 +558,16 @@
 				03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */,
 				0339BB132771F15300189098 /* SingletonViewController.swift in Sources */,
 				037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */,
+				03937268279430D0004C23A1 /* Session.swift in Sources */,
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */,
+				03EFDBF32794376A0032A6D3 /* UIImage+Resize.swift in Sources */,
 				03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */,
 				03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */,
 				03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */,
 				033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */,
-				039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */,
-				03BAC0E927539A4D00A34E9C /* Groups.swift in Sources */,
 				039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */,
+				0393726C279430D0004C23A1 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,15 +793,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		03937273279432D4004C23A1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -841,23 +801,57 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		03CEE6172794399300B2CF34 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+		03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		037E7003278451EF0093D88B /* Realm */ = {
+		0393727E2794335E004C23A1 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 03937273279432D4004C23A1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		03CEE6182794399300B2CF34 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03CEE6172794399300B2CF34 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		037E7005278451EF0093D88B /* RealmSwift */ = {
+		03CEE61A2794399300B2CF34 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 037E7002278451EF0093D88B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 03CEE6172794399300B2CF34 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
-		037E7008278452140093D88B /* SwiftyJSON */ = {
+		03DBFAF527942BB30088F34E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
+			package = 03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		03DBFAF827942BCE0088F34E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

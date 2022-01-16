@@ -48,25 +48,7 @@ class LoginScreenViewController: UIViewController {
   }
   
   @objc func onPressed () {
-    
-    // MARK: - Форма авторизации
-    
-//    guard let login = loginTextField.text,
-//          let password = passwordTextField.text
-//    else { return }
-//    
-//    switch login {
-//      case "admin" where password == "admin":
-//        performSegue(withIdentifier: "fromLoginScreenToWelcomePage",
-//                     sender: nil)
-//      default:
-//        loginTextField.backgroundColor = UIColor.lightGray
-//        passwordTextField.backgroundColor = UIColor.lightGray
-//        welcomeTitle.text = "Проверьте логин и пароль"
-//        popUpMessage.isHidden = false
-//    }
-    
-    
+
     performSegue(withIdentifier: "fromLoginScreenToWelcomePage",
                  sender: nil)
     

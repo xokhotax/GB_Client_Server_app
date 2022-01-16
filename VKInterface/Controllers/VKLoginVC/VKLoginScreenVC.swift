@@ -22,7 +22,6 @@ class VKLoginScreenVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    webView.navigationDelegate = self
     webView.load(networkServices.vkLogin())
   }
 
