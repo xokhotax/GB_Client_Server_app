@@ -25,9 +25,8 @@ class GalleryViewController: UIViewController {
   
   private var interactiveAnimation: UIViewPropertyAnimator!
   let toBigUsersGalleryVC = "toBigUsersGalleryVC"
+  
   private var sourceArrayCounter = 0
-  
-  
   private func inputDataToSwipeGalleryImage() {
     
     let friendId = String(describing: Session.shared.friendId)

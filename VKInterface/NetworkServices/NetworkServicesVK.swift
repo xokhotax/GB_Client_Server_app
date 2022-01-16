@@ -69,34 +69,7 @@ class NetworkServices {
     return request
   }
   
-  func vkFriendsOnline() {
-    
-    var urlComponents = URLComponents()
-    urlComponents.scheme = "https"
-    urlComponents.host = "api.vk.com"
-    urlComponents.path = "/method/friends.getOnline"
-    urlComponents.queryItems = [
-      URLQueryItem(name: "access_token", value: token),
-      URLQueryItem(name: "v", value: version)
-    ]
-    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
-  }
-  
-  func vkPhotosLoad() {
-    
-    var urlComponents = URLComponents()
-    urlComponents.scheme = "https"
-    urlComponents.host = "api.vk.com"
-    urlComponents.path = "/method/photos.get"
-    urlComponents.queryItems = [
-      URLQueryItem(name: "access_token", value: token),
-      URLQueryItem(name: "owner_id", value: userId),
-      URLQueryItem(name: "album_id", value: "wall"),
-      URLQueryItem(name: "count", value: "50"),
-      URLQueryItem(name: "v", value: version)
-    ]
-    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
-  }
+
   
   func vkGroupList(completion: @escaping (Result<[Groups], Error>) -> Void) {
     let path = "/method/groups.get"
@@ -197,7 +170,7 @@ class NetworkServices {
       URLQueryItem(name: "count", value: "3"),
       URLQueryItem(name: "v", value: version)
     ]
-    vkPrintDataToConsole(urlComponents: urlComponents, webView: nil)
+    vkPrintDataToConsole(urlComponents: urlComponents)
   }
   
 }

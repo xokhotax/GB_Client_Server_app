@@ -24,13 +24,4 @@ extension UserGroupViewController: UITableViewDataSource {
     return cell
   }
   
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
-//  func tableView(_ tableView: UITableView,
-//                 canEditRowAt indexPath: IndexPath) -> Bool {
-//    return true
-//  }
-  
 }

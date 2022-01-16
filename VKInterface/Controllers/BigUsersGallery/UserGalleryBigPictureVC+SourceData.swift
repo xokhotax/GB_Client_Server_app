@@ -20,10 +20,6 @@ extension UserGalleryBigPicture: UICollectionViewDataSource {
     cell.configureBigImage(image: UIImage(named: sourceArray[indexPath.item]))
     return cell
   }
-  
-  func numberOfSections(in collectionView: UICollectionView) -> Int{
-    return 1
-  }
 }
 
 

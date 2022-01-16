@@ -20,9 +20,4 @@ extension AllGroupsViewController: UITableViewDataSource {
     cell.configure(groups: allGroupsArray[indexPath.row])
     return cell
   }
-  
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
 }
