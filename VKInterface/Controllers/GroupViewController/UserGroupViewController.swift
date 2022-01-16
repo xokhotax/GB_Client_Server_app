@@ -46,15 +46,7 @@ class UserGroupViewController: UIViewController {
                                             Notification.Name("addNewGroupSelectNotification"),
                                            object: nil)
     self.navigationController?.delegate = self
-    
-    //    fillUserGroupData()
   }
-  
-  //  func fillUserGroupData() {
-  //    let group1 = Groups(name: "Simpsons", avatar: "bartAvatar")
-  //    userGroupsArray.append(group1)
-  //
-  //  }
   
   
   @objc func addUserNewGroup (_ notification: Notification) {

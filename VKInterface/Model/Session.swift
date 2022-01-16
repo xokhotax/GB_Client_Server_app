@@ -8,17 +8,6 @@
 import Foundation
 import RealmSwift
 
-//
-//class Session {
-//  static let shared = Session()
-//  private init() {}
-//  var token = ""
-//  var userId = ""
-//}
-
-
-
-
 class Session: RealmSwift.Object {
   @objc dynamic var token: String = ""
   @objc dynamic var userId: String = ""
