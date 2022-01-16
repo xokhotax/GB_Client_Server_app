@@ -11,7 +11,7 @@ class AllGroupsViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var allGroupsArray = [Groups]()
+  var groups = [Groups]()
   
   let cellReuseIdentificator = "cellReuseIdentificator"
   let cellHeightGroupsViewController: CGFloat = 150

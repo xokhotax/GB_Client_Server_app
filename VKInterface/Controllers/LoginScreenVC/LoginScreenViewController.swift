@@ -48,7 +48,6 @@ class LoginScreenViewController: UIViewController {
   }
   
   @objc func onPressed () {
-
     performSegue(withIdentifier: "fromLoginScreenToWelcomePage",
                  sender: nil)
     

@@ -66,4 +66,5 @@ class AddFriendViewController: UIViewController {
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
+
 }

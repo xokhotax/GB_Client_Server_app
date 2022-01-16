@@ -18,8 +18,8 @@ struct UsersListResponse: Codable {
 
 extension UsersListResponse {
   init(from decoder: Decoder) throws {
-   guard let container = try? decoder.container(keyedBy: CodingKeys.self),
-    let response = try? container.decode(ResponseStruct.self, forKey: .response)
+    guard let container = try? decoder.container(keyedBy: CodingKeys.self),
+          let response = try? container.decode(ResponseStruct.self, forKey: .response)
     else { throw NSError() }
     self.response = response
   }
@@ -47,7 +47,7 @@ extension ResponseStruct {
 }
 
 struct Users: Codable {
-
+  
   enum CodingKeys: String, CodingKey {
     case id = "id"
     case name = "first_name"
@@ -65,7 +65,7 @@ struct Users: Codable {
   let isClosed: Bool
   let avatar: URL
   let track_code: String
-
+  
   
 }
 

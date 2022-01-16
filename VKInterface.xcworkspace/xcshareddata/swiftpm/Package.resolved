@@ -32,15 +32,9 @@
         "package": "Realm",
         "repositoryURL": "https://github.com/realm/realm-swift.git",
         "state": {
-<<<<<<< HEAD
-          "branch": "master",
-          "revision": "398ac34ff8c5ed68dfd6d42d41e674dbde9733be",
-          "version": null
-=======
           "branch": null,
           "revision": "39177714b95bb5b1b29fffe28f1c7da77eef8e8b",
           "version": "10.21.1"
->>>>>>> Lesson5-6
         }
       },
       {

@@ -9,13 +9,12 @@ import Foundation
 import RealmSwift
 
 class Session: RealmSwift.Object {
-  @objc dynamic var token: String = ""
-  @objc dynamic var userId: String = ""
-  @objc dynamic var friendId: Any = ""
+  @Persisted var token: String = ""
+  @Persisted var userId: String = ""
+  var friendId: Any = ""
   
   convenience init(token: String, userId: String, friendId: Any) {
     self.init()
-    
     self.token = token
     self.userId = userId
     self.friendId = friendId

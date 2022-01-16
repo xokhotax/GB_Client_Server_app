@@ -10,18 +10,14 @@ import WebKit
 
 class VKLoginScreenVC: UIViewController {
   
-  @IBOutlet weak var webView: WKWebView! {
-    didSet {
-        webView.navigationDelegate = self
-    }
-}
-  
+  @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var scrollView: UIScrollView!
   
   private let networkServices = NetworkServices()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    webView.navigationDelegate = self
     webView.load(networkServices.vkLogin())
   }
 

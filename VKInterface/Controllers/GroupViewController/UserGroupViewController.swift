@@ -46,8 +46,9 @@ class UserGroupViewController: UIViewController {
                                             Notification.Name("addNewGroupSelectNotification"),
                                            object: nil)
     self.navigationController?.delegate = self
-  }
   
+  }
+
   
   @objc func addUserNewGroup (_ notification: Notification) {
     guard let groupObject = notification.object as? Groups else { return }

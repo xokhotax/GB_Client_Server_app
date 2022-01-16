@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 extension FriendsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView,

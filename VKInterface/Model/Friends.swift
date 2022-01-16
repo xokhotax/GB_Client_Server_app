@@ -12,24 +12,24 @@ import UIKit
 //MARK: - Online
 
 class Friends: Object {
-  @objc dynamic var firstName = ""
-  @objc dynamic var lastName = ""
-  @objc dynamic var friendImageUrlText = ""
-  @objc dynamic var friendAvatar: URL? { URL(string: "\(friendImageUrlText)") }
+  @Persisted var firstName = ""
+  @Persisted var lastName = ""
+  @Persisted var friendImageUrlText = ""
+  var friendAvatar: URL? { URL(string: "\(friendImageUrlText)") }
   var photosArray: [UIImage?] = []
-  @objc dynamic var friendId = ""
+  var friendId: Any = ""
   
   override static func primaryKey() -> String? {
-      return "friendId"
+    return "friendId"
   }
   
   convenience init(json: SwiftyJSON.JSON) {
-      self.init()
-      
-      self.firstName = json["first_name"].stringValue
-      self.lastName = json["last_name"].stringValue
-      self.friendImageUrlText = json["photo_200_orig"].stringValue
-      self.friendId = json["id"].stringValue
+    self.init()
+    
+    self.firstName = json["first_name"].stringValue
+    self.lastName = json["last_name"].stringValue
+    self.friendImageUrlText = json["photo_200_orig"].stringValue
+    self.friendId = json["id"].stringValue
   }
   public static let shared = Friends()
 }
