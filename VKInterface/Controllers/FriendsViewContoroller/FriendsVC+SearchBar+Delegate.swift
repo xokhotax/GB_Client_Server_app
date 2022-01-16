@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 
 extension FriendsViewController: UISearchBarDelegate {
