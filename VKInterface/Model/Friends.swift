@@ -17,7 +17,7 @@ class Friends: Object {
   @Persisted var friendImageUrlText = ""
   var friendAvatar: URL? { URL(string: "\(friendImageUrlText)") }
   var photosArray: [UIImage?] = []
-  var friendId: Any = ""
+  @Persisted var friendId = ""
   
   override static func primaryKey() -> String? {
     return "friendId"
