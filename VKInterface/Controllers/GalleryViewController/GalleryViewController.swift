@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
+//import RealmSwift
+
 
 class GalleryViewController: UIViewController {
   
@@ -15,22 +18,41 @@ class GalleryViewController: UIViewController {
   @IBOutlet weak var swipeGallerySecondView: UIView!
   @IBOutlet weak var swipeGallerySecondImage: UIImageView!
   
-  var sourceArray: [String] = []
+  var sourceArray: [Photo] = []
+  var choosedFriend: Friends?
+  
+  private let networkServices = NetworkServices()
+  
   private var interactiveAnimation: UIViewPropertyAnimator!
   let toBigUsersGalleryVC = "toBigUsersGalleryVC"
   private var sourceArrayCounter = 0
   
+  
   private func inputDataToSwipeGalleryImage() {
-    guard let transferedGallery = UIImage(named: sourceArray[sourceArrayCounter]) else { return }
-    swipeGalleryImage.image = transferedGallery
-    swipeGallerySecondImage.image = transferedGallery
+    
+    let friendId = String(describing: Session.shared.friendId)
+    
+    networkServices.VKFriendloadPhoto(friendId: friendId, completion: { result in
+      switch result {
+        case let .failure(error):
+          print(error)
+        case let .success(photo):
+          let sourceArrayNew: [Photo] = photo
+          self.sourceArray = sourceArrayNew
+          self.collectionView.reloadData()
+          
+          guard let url = URL(string: self.sourceArray[self.sourceArrayCounter].url) else { return }
+          self.swipeGalleryImage.kf.setImage(with:url)
+          self.swipeGallerySecondImage.kf.setImage(with:url)
+      }
+    })
   }
   
   private func nextPictureToswipeGalleryImage() {
     if sourceArrayCounter < sourceArray.count {
-      guard let transferedGallery = UIImage(named: sourceArray[sourceArrayCounter]) else { return }
-      swipeGalleryImage.image = transferedGallery
-      swipeGallerySecondImage.image = transferedGallery
+      guard let url = URL(string: sourceArray[sourceArrayCounter].url) else { return }
+      swipeGalleryImage.kf.setImage(with:url)
+      swipeGallerySecondImage.kf.setImage(with:url)
       sourceArrayCounter += 1
     } else if sourceArrayCounter >= sourceArray.count {
       sourceArrayCounter = 0
@@ -86,6 +108,7 @@ class GalleryViewController: UIViewController {
     collectionView.register(UINib(nibName: "GalleryCell", bundle: nil),
                             forCellWithReuseIdentifier: "reUseIdentificator")
     inputDataToSwipeGalleryImage()
+    
     let gestureRecognizer = UIPanGestureRecognizer(target: self,
                                                    action: #selector(onPan(_:)))
     self.view.addGestureRecognizer(gestureRecognizer)

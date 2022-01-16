@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @IBDesignable class GalleryCell: UICollectionViewCell {
   
@@ -18,8 +19,8 @@ import UIKit
     photoImageView.image = nil
   }
   
-  func configure(image: UIImage?){
-    photoImageView.image = image
+  func configure(friendImage: Photo){
+    photoImageView.kf.setImage(with: friendImage.iconUrl)
     likeController.isHidden = true
   }
   

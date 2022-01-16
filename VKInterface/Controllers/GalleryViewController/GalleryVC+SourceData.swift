@@ -17,7 +17,7 @@ extension GalleryViewController: UICollectionViewDataSource {
                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reUseIdentificator",
                                                   for: indexPath) as! GalleryCell
-    cell.configure(image: UIImage(named: sourceArray[indexPath.item]))
+    cell.configure(friendImage: sourceArray[indexPath.item])
     return cell
   }
   

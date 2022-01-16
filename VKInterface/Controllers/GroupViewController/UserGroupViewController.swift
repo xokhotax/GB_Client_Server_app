@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UserGroupViewController: UIViewController {
   
@@ -16,19 +17,28 @@ class UserGroupViewController: UIViewController {
   
   var userGroupsArray = [Groups]()
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
+  var userGroup: Results<Groups>? = try? Realm(configuration: RealmService.deleteIfMigration).objects(Groups.self)
   
-  
+  private let networkServices = NetworkServices()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    networkServices.vkGroupList { [weak self] result in
+      switch result {
+        case let .failure(error):
+          print(error)
+        case let .success(group):
+          guard let self = self else { return }
+          try? RealmService.save(items: group)
+          self.tableView.reloadData()
+      }
+    }
     tableView.dataSource = self
     tableView.delegate = self
     tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil),
                        forCellReuseIdentifier: cellReuseIdentificator)
-    fillUserGroupData()
+    
     NotificationCenter.default.addObserver(self,
                                            selector:
                                             #selector(addUserNewGroup(_:)),
@@ -36,14 +46,16 @@ class UserGroupViewController: UIViewController {
                                             Notification.Name("addNewGroupSelectNotification"),
                                            object: nil)
     self.navigationController?.delegate = self
+    
+    //    fillUserGroupData()
   }
   
-  func fillUserGroupData() {
-    let group1 = Groups(name: "Simpsons", avatar: "bartAvatar")
-    userGroupsArray.append(group1)
-    
-  }
-
+  //  func fillUserGroupData() {
+  //    let group1 = Groups(name: "Simpsons", avatar: "bartAvatar")
+  //    userGroupsArray.append(group1)
+  //
+  //  }
+  
   
   @objc func addUserNewGroup (_ notification: Notification) {
     guard let groupObject = notification.object as? Groups else { return }
@@ -61,5 +73,4 @@ class UserGroupViewController: UIViewController {
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
-  
 }

@@ -9,21 +9,33 @@ import UIKit
 import WebKit
 
 class VKLoginScreenVC: UIViewController {
-  @IBOutlet weak var webView: WKWebView!
+  
+  @IBOutlet weak var webView: WKWebView! {
+    didSet {
+        webView.navigationDelegate = self
+    }
+}
+  
   @IBOutlet weak var scrollView: UIScrollView!
   
   private let networkServices = NetworkServices()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    webView.navigationDelegate = self
+//    webView.navigationDelegate = self
     webView.load(networkServices.vkLogin())
-    
   }
-  
-    //    print ("Друзья онлайн \(vkFriendsOnline())")
-    //    print ("Загрузка фото \(vkPhotosLoad())")
-    //    vkGroupList()
-  
-  
+
+  @IBAction func unwindAndClearCookies(segue: UIStoryboardSegue) {
+      let cookieStore = webView.configuration.websiteDataStore.httpCookieStore
+    
+      cookieStore.getAllCookies {
+          cookies in
+          
+          for cookie in cookies {
+              cookieStore.delete(cookie)
+          }
+      }
+      webView.load(networkServices.vkLogin())
+  }
 }
