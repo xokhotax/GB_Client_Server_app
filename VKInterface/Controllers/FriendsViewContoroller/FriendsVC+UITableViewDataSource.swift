@@ -10,15 +10,14 @@ import UIKit
 extension FriendsViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    guard let quantity = friend?.count else { return 0 }
-    return quantity
+    return friend?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator,
                                                    for: indexPath) as? CustomTableViewCell,
-          let friends = friend?[indexPath.item] else { return UITableViewCell() }
+          let friends = friend?[indexPath.row] else { return UITableViewCell() }
     cell.configure(friend: friends)
         cell.delegate = self
     

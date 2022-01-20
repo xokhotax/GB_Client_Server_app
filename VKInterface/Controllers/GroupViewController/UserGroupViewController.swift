@@ -11,14 +11,10 @@ import RealmSwift
 class UserGroupViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
-  
-  let cellReuseIdentificator = "cellReuseIdentificator"
   let cellHeightGroupsViewController: CGFloat = 200
-  
+  private var token: NotificationToken?
   var userGroupsArray = [Groups]()
-  
   var userGroup: Results<Groups>? = try? Realm(configuration: RealmService.deleteIfMigration).objects(Groups.self)
-  
   private let networkServices = NetworkServices()
   
   override func viewDidLoad() {
@@ -30,7 +26,7 @@ class UserGroupViewController: UIViewController {
           print(error)
         case let .success(group):
           guard let self = self else { return }
-          try? RealmService.save(items: group)
+          try? RealmService.save(items: group, update: .modified)
           self.tableView.reloadData()
       }
     }
@@ -45,11 +41,10 @@ class UserGroupViewController: UIViewController {
                                            name:
                                             Notification.Name("addNewGroupSelectNotification"),
                                            object: nil)
+    changeRealmCollection() 
     self.navigationController?.delegate = self
-  
   }
 
-  
   @objc func addUserNewGroup (_ notification: Notification) {
     guard let groupObject = notification.object as? Groups else { return }
     
@@ -63,7 +58,35 @@ class UserGroupViewController: UIViewController {
       tableView.reloadData()
     }
   }
+  
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
+  
+  func changeRealmCollection() {
+    guard let userGroup = userGroup else { return }
+    self.token = userGroup.observe { (change: RealmCollectionChange) in
+      switch change {
+        case .initial:
+          self.tableView.reloadData()
+        case let .update ( _, deletions, insertions, modifications):
+          self.tableView.beginUpdates()
+          self.tableView.insertRows(at:insertions.map({IndexPath(row:$0,
+                                                                 section:0)}),
+                                    with: .automatic)
+          self.tableView.deleteRows(at:deletions.map({IndexPath(row:$0,
+                                                                section:0)}),
+                                    with:.automatic)
+          self.tableView.reloadRows(at:modifications.map({IndexPath(row:$0,
+                                                                    section:0)}),
+                                    with:.automatic)
+          self.tableView.endUpdates()
+          
+        case let .error (error):
+          print("\(error)")
+      }
+    }
+  }
+  
+  
 }

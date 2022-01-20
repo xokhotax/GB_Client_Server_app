@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddFriendViewController: UIViewController {
   
@@ -13,6 +14,8 @@ class AddFriendViewController: UIViewController {
   @IBOutlet weak var addFriendScrollView: UIScrollView!
   @IBOutlet weak var newUserName: UITextField!
   @IBOutlet weak var newUserSurname: UITextField!
+  
+  private let realm = try? Realm()
   
   
   override func viewDidLoad() {
@@ -66,5 +69,33 @@ class AddFriendViewController: UIViewController {
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
-
+  
+  @IBAction func addNewUser(_ sender: Any) {
+    
+    addNewFriend()
+    
+    //    NotificationCenter.default.post(name: Notification.Name("addNewUserButton"),
+    //                                    object: newAddFriendData)
+    
+    self.view.endEditing(true)
+  }
+  
+  func addNewFriend() {
+    do {
+      guard let newUserName = newUserName.text,
+            let newUserSurname = newUserSurname.text
+      else { return }
+      let friend = Friends()
+      friend.firstName = newUserName
+      friend.lastName = newUserSurname
+      friend.friendId = String(Int.random(in: 1..<1000000))
+      try realm?.write({
+        self.realm?.add(friend)
+      })
+    } catch {
+      print(error)
+    }
+  }
+  
+  
 }

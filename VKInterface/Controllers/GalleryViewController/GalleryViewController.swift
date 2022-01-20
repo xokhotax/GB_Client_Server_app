@@ -24,7 +24,6 @@ class GalleryViewController: UIViewController {
   private let networkServices = NetworkServices()
   
   private var interactiveAnimation: UIViewPropertyAnimator!
-  let toBigUsersGalleryVC = "toBigUsersGalleryVC"
   private var sourceArrayCounter = 0
   
   

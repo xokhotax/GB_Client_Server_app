@@ -7,7 +7,7 @@
 
 import Foundation
 import RealmSwift
-
+import Realm
 
 class RealmService {
     static let deleteIfMigration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)

@@ -671,7 +671,7 @@
 		ECF8332FAE81E45AD4D292C0EF3B6EC3 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
 		ED11603090175BE2D3C55D42BB13401E /* RLMFindOptions.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMFindOptions.mm; path = Realm/RLMFindOptions.mm; sourceTree = "<group>"; };
 		EDBB070CB37583C86134C7C3C1D2EFDB /* SchemaDiscovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchemaDiscovery.swift; path = RealmSwift/Impl/SchemaDiscovery.swift; sourceTree = "<group>"; };
-		EDDB069F127DC249F84FD888DEB81354 /* Pods-VKInterface */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VKInterface"; path = Pods_VKInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDB069F127DC249F84FD888DEB81354 /* Pods_VKInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5B178748ED1B9A860ED3BBC9972718 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
 		EF852AF918A32818A0414AD6D17B18E3 /* RLMManagedArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMManagedArray.mm; path = Realm/RLMManagedArray.mm; sourceTree = "<group>"; };
 		EFADB91B8FDC20CC2046C41CB6ABEB2C /* ComplexTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComplexTypes.swift; path = RealmSwift/Impl/ComplexTypes.swift; sourceTree = "<group>"; };
@@ -911,7 +911,7 @@
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				EDDB069F127DC249F84FD888DEB81354 /* Pods-VKInterface */,
+				EDDB069F127DC249F84FD888DEB81354 /* Pods_VKInterface.framework */,
 				921BE4A82C4A7A5C72A0C6F8B8FEF200 /* Realm.framework */,
 				437919EE08EC6BFCCBAC3BD346309742 /* RealmSwift.framework */,
 				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
@@ -1285,7 +1285,7 @@
 			);
 			name = "Pods-VKInterface";
 			productName = Pods_VKInterface;
-			productReference = EDDB069F127DC249F84FD888DEB81354 /* Pods-VKInterface */;
+			productReference = EDDB069F127DC249F84FD888DEB81354 /* Pods_VKInterface.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		782725687624F8665247B84AB581BEB1 /* RealmSwift */ = {

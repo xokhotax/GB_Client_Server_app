@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030F630B276137130069425F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F630A276137130069425F /* NewsViewController.swift */; };
+		030FC0022799D34D00191961 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 030FC0012799D34D00191961 /* Kingfisher */; };
 		031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */; };
 		031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AE0A1275CD7670036A9C3 /* LikeController.swift */; };
 		031AE0A6275CE8F00036A9C3 /* LikeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031AE0A5275CE8F00036A9C3 /* LikeController.xib */; };
@@ -31,7 +32,6 @@
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
 		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
-		037E7009278452140093D88B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 037E7008278452140093D88B /* SwiftyJSON */; };
 		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
@@ -52,12 +52,8 @@
 		03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0FE2753D1C100A34E9C /* AllGroupsVC+DataSource.swift */; };
 		03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC1002753D1D000A34E9C /* AllGroupsVC+Deligate.swift */; };
 		03C7106D27410AC20000159F /* VK Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7106C27410AC20000159F /* VK Sans.ttf */; };
-		03D84E98279440F000A50657 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 03D84E97279440F000A50657 /* Realm */; };
-		03D84E9A279440F000A50657 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03D84E99279440F000A50657 /* RealmSwift */; };
 		03D84E9C2794411D00A50657 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9B2794411D00A50657 /* RealmServices.swift */; };
 		03D84E9E2794418200A50657 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9D2794418200A50657 /* Photo.swift */; };
-		03DBFAF627942BB30088F34E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03DBFAF527942BB30088F34E /* Alamofire */; };
-		03DBFAF927942BCE0088F34E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 03DBFAF827942BCE0088F34E /* Kingfisher */; };
 		03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */; };
 		B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */; };
 /* End PBXBuildFile section */
@@ -122,12 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D84E9A279440F000A50657 /* RealmSwift in Frameworks */,
-				03DBFAF927942BCE0088F34E /* Kingfisher in Frameworks */,
-				03DBFAF627942BB30088F34E /* Alamofire in Frameworks */,
-				037E7009278452140093D88B /* SwiftyJSON in Frameworks */,
+				030FC0022799D34D00191961 /* Kingfisher in Frameworks */,
 				B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */,
-				03D84E98279440F000A50657 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,11 +395,7 @@
 			);
 			name = VKInterface;
 			packageProductDependencies = (
-				037E7008278452140093D88B /* SwiftyJSON */,
-				03DBFAF527942BB30088F34E /* Alamofire */,
-				03DBFAF827942BCE0088F34E /* Kingfisher */,
-				03D84E97279440F000A50657 /* Realm */,
-				03D84E99279440F000A50657 /* RealmSwift */,
+				030FC0012799D34D00191961 /* Kingfisher */,
 			);
 			productName = VKInterface;
 			productReference = 033F1FB12741035C00C20077 /* VKInterface.app */;
@@ -438,10 +426,7 @@
 			);
 			mainGroup = 033F1FA82741035C00C20077;
 			packageReferences = (
-				037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */,
-				03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				03D84E96279440F000A50657 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				030FC0002799D34D00191961 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 033F1FB22741035C00C20077 /* Products */;
 			projectDirPath = "";
@@ -781,31 +766,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		03D84E96279440F000A50657 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.19.0;
-			};
-		};
-		03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		030FC0002799D34D00191961 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -816,29 +777,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		037E7008278452140093D88B /* SwiftyJSON */ = {
+		030FC0012799D34D00191961 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 037E7007278452140093D88B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		03D84E97279440F000A50657 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03D84E96279440F000A50657 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		03D84E99279440F000A50657 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03D84E96279440F000A50657 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		03DBFAF527942BB30088F34E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03DBFAF427942BB30088F34E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		03DBFAF827942BCE0088F34E /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03DBFAF727942BCE0088F34E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 030FC0002799D34D00191961 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

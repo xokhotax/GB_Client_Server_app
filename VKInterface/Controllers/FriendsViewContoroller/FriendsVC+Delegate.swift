@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 extension FriendsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView,
@@ -24,8 +25,16 @@ extension FriendsViewController: UITableViewDelegate {
       
       let actionYes = UIAlertAction(title: "Да", style: .default) {[ weak self ] _ in
         guard let self = self else { return }
-        self.friendsArray.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        let friend = self.friend?[indexPath.row]
+        do {
+          let realm = try? Realm()
+          guard let friend = friend else {return}
+          try realm?.write({
+            realm?.delete(friend)
+          })
+        } catch {
+          print(error)
+        }
       }
       alertController.addAction(actionYes)
       let actionNo = UIAlertAction (title: "Нет", style: .cancel, handler: nil)
