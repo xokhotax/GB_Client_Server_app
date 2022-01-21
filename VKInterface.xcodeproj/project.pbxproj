@@ -33,6 +33,9 @@
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
 		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
 		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
+		03855043279B03EE00ABCB53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03855042279B03EE00ABCB53 /* GoogleService-Info.plist */; };
+		03855045279B08A900ABCB53 /* FireBaseLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */; };
+		03855048279B371500ABCB53 /* UsersFireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03855047279B371500ABCB53 /* UsersFireBase.swift */; };
 		039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */; };
 		039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */; };
 		039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */; };
@@ -51,6 +54,7 @@
 		03BAC0FD2753CE3C00A34E9C /* UserGroupVC+Deligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0FC2753CE3C00A34E9C /* UserGroupVC+Deligate.swift */; };
 		03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC0FE2753D1C100A34E9C /* AllGroupsVC+DataSource.swift */; };
 		03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAC1002753D1D000A34E9C /* AllGroupsVC+Deligate.swift */; };
+		03C0903E279B635A009D68BB /* UsersFBSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0903D279B635A009D68BB /* UsersFBSingleton.swift */; };
 		03C7106D27410AC20000159F /* VK Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7106C27410AC20000159F /* VK Sans.ttf */; };
 		03D84E9C2794411D00A50657 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9B2794411D00A50657 /* RealmServices.swift */; };
 		03D84E9E2794418200A50657 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9D2794418200A50657 /* Photo.swift */; };
@@ -86,6 +90,9 @@
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
 		03531138278037EE00092ED0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		037E700A278453C60093D88B /* NetworkServicesVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesVK.swift; sourceTree = "<group>"; };
+		03855042279B03EE00ABCB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseLoginVC.swift; sourceTree = "<group>"; };
+		03855047279B371500ABCB53 /* UsersFireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFireBase.swift; sourceTree = "<group>"; };
 		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
 		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -104,6 +111,7 @@
 		03BAC0FC2753CE3C00A34E9C /* UserGroupVC+Deligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+Deligate.swift"; sourceTree = "<group>"; };
 		03BAC0FE2753D1C100A34E9C /* AllGroupsVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsVC+DataSource.swift"; sourceTree = "<group>"; };
 		03BAC1002753D1D000A34E9C /* AllGroupsVC+Deligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsVC+Deligate.swift"; sourceTree = "<group>"; };
+		03C0903D279B635A009D68BB /* UsersFBSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFBSingleton.swift; sourceTree = "<group>"; };
 		03C7106C27410AC20000159F /* VK Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VK Sans.ttf"; sourceTree = "<group>"; };
 		03D84E9B2794411D00A50657 /* RealmServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
 		03D84E9D2794418200A50657 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 		033F1FA82741035C00C20077 = {
 			isa = PBXGroup;
 			children = (
+				03855042279B03EE00ABCB53 /* GoogleService-Info.plist */,
 				033F1FB32741035C00C20077 /* VKInterface */,
 				033F1FB22741035C00C20077 /* Products */,
 				C2D5C08637705D1019FD855C /* Pods */,
@@ -234,6 +243,14 @@
 				03C7106F27410AE80000159F /* Fonts */,
 			);
 			path = VKInterface;
+			sourceTree = "<group>";
+		};
+		03855046279B08AE00ABCB53 /* FireBaseLoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */,
+			);
+			path = FireBaseLoginVC;
 			sourceTree = "<group>";
 		};
 		039FCC522775DDC6007AD9D8 /* VKLoginVC */ = {
@@ -296,6 +313,7 @@
 				03BAC0D12753924800A34E9C /* FriendsViewContoroller */,
 				039FCC522775DDC6007AD9D8 /* VKLoginVC */,
 				039FCC562775E37A007AD9D8 /* AddFriendsVC */,
+				03855046279B08AE00ABCB53 /* FireBaseLoginVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -318,6 +336,8 @@
 				031AE0A9275EA28B0036A9C3 /* Constants.swift */,
 				0339BB142771F1DA00189098 /* Session.swift */,
 				03531138278037EE00092ED0 /* Users.swift */,
+				03855047279B371500ABCB53 /* UsersFireBase.swift */,
+				03C0903D279B635A009D68BB /* UsersFBSingleton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033F1FC12741035C00C20077 /* LaunchScreen.storyboard in Resources */,
+				03855043279B03EE00ABCB53 /* GoogleService-Info.plist in Resources */,
 				033F1FBE2741035C00C20077 /* Assets.xcassets in Resources */,
 				03C7106D27410AC20000159F /* VK Sans.ttf in Resources */,
 				03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */,
@@ -502,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D84E9E2794418200A50657 /* Photo.swift in Sources */,
+				03855048279B371500ABCB53 /* UsersFireBase.swift in Sources */,
 				03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */,
 				03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */,
 				039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */,
@@ -511,6 +533,7 @@
 				03D84E9C2794411D00A50657 /* RealmServices.swift in Sources */,
 				033F1FB92741035C00C20077 /* ViewController.swift in Sources */,
 				03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */,
+				03C0903E279B635A009D68BB /* UsersFBSingleton.swift in Sources */,
 				031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */,
 				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
@@ -534,6 +557,7 @@
 				037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */,
 				03370C962756B1650056B659 /* GalleryCell.swift in Sources */,
 				035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */,
+				03855045279B08A900ABCB53 /* FireBaseLoginVC.swift in Sources */,
 				03BAC0FF2753D1C100A34E9C /* AllGroupsVC+DataSource.swift in Sources */,
 				03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */,
 				03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */,

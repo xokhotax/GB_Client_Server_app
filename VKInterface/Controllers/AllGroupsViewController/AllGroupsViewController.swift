@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AllGroupsViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var groups = [Groups]()
+  var groups = UserGroupViewController().userGroup
+  
+  
   
   let cellReuseIdentificator = "cellReuseIdentificator"
   let cellHeightGroupsViewController: CGFloat = 150

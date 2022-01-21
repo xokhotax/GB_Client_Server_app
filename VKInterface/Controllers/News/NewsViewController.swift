@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import FirebaseAuth
 
 
 final class NewsViewController: UIViewController {
@@ -118,7 +119,7 @@ final class NewsViewController: UIViewController {
     }
   }
   
-
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -136,4 +137,11 @@ final class NewsViewController: UIViewController {
   }
   
   
+  @IBAction func logOut(_ sender: Any) {
+    do {
+      try Auth.auth().signOut()
+    } catch let (error) {
+      print("\(error)")
+    }
+  }
 }

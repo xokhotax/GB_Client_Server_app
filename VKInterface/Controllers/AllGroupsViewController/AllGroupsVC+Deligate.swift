@@ -15,7 +15,7 @@ extension AllGroupsViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     NotificationCenter.default.post(name: Notification.Name("addNewGroupSelectNotification"),
-                                    object: groups[indexPath.row])
+                                    object: groups?[indexPath.row])
   }
   
 }

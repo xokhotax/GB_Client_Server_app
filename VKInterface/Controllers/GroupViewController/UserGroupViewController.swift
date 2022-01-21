@@ -7,19 +7,22 @@
 
 import UIKit
 import RealmSwift
+import FirebaseFirestore
 
 class UserGroupViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   let cellHeightGroupsViewController: CGFloat = 200
   private var token: NotificationToken?
-  var userGroupsArray = [Groups]()
+  var userChoosedGroups = [""]
   var userGroup: Results<Groups>? = try? Realm(configuration: RealmService.deleteIfMigration).objects(Groups.self)
   private let networkServices = NetworkServices()
+  private let base = Firestore.firestore()
+  private let collection = "geekBrain"
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    changeRealmCollection()
     networkServices.vkGroupList { [weak self] result in
       switch result {
         case let .failure(error):
@@ -41,22 +44,31 @@ class UserGroupViewController: UIViewController {
                                            name:
                                             Notification.Name("addNewGroupSelectNotification"),
                                            object: nil)
-    changeRealmCollection() 
     self.navigationController?.delegate = self
   }
-
+  
   @objc func addUserNewGroup (_ notification: Notification) {
-    guard let groupObject = notification.object as? Groups else { return }
+    guard let userGroup = notification.object as? Groups else { return }
+    userChoosedGroups.append(userGroup.name)
+    let model = UserFireBase(email: UsersFBSingleton.shared.email,
+                             iD: UsersFBSingleton.shared.uid,
+                             groupName: userChoosedGroups)
+    guard let data = try? JSONEncoder().encode(model),
+          let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+    else { return }
     
-    if userGroupsArray.contains(where: { allGroupsArray in
-      allGroupsArray.name == groupObject.name
-    }) {
-      print ("Группа уже добавлена")
-    }
-    else {
-      userGroupsArray.append(groupObject)
-      tableView.reloadData()
-    }
+    
+    self.base.collection(_:self.collection).document(UsersFBSingleton.shared.uid).setData(dict, merge: false)
+   
+//    do {
+//      guard let realm = try? Realm() else { return }
+//      try realm.write({
+//        realm.add(userGroup)
+//      })
+//    } catch {
+//      print(error)
+//    }
+//    self.tableView.reloadData()
   }
   
   deinit {

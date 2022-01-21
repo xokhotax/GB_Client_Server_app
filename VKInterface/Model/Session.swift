@@ -11,6 +11,7 @@ import RealmSwift
 class Session: RealmSwift.Object {
   @Persisted var token: String = ""
   @Persisted var userId: String = ""
+  
   var friendId: Any = ""
   
   convenience init(token: String, userId: String, friendId: Any) {

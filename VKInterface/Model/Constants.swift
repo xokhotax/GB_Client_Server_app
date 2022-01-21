@@ -10,3 +10,5 @@ var cellHeightFriendsViewController: CGFloat = 150
 let cellReuseIdentificator = "cellReuseIdentificator"
 let toGallerySeague = "toGallerySeague"
 let toBigUsersGalleryVC = "toBigUsersGalleryVC"
+let goToVKLogin = "goToVKLogin"
+

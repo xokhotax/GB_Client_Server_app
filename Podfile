@@ -12,5 +12,8 @@ pod 'Alamofire', '~> 5.5'
 pod 'RealmSwift', '~>10'
 pod 'SwiftyJSON', '~> 4.0'
 # pod 'Alamofire-SwiftyJSON' 
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Database'
 
 end
