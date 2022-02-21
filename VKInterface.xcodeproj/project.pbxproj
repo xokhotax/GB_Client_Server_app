@@ -32,6 +32,11 @@
 		035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */; };
 		035176072767D1BB0039CD04 /* CustomAnimationOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */; };
 		03531139278037EE00092ED0 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03531138278037EE00092ED0 /* Users.swift */; };
+		0356022727C4072D00436A7F /* NewsLineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356022627C4072D00436A7F /* NewsLineVC.swift */; };
+		0356022D27C407E000436A7F /* NewsLineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356022B27C407E000436A7F /* NewsLineTVC.swift */; };
+		0356022E27C407E000436A7F /* NewsLineTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356022C27C407E000436A7F /* NewsLineTVC.xib */; };
+		0356023027C40AFB00436A7F /* NewsLineVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356022F27C40AFB00436A7F /* NewsLineVC+DataSource.swift */; };
+		0356023227C40B0900436A7F /* NewsLineVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356023127C40B0900436A7F /* NewsLineVC+Delegate.swift */; };
 		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
 		03855043279B03EE00ABCB53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03855042279B03EE00ABCB53 /* GoogleService-Info.plist */; };
 		03855045279B08A900ABCB53 /* FireBaseLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */; };
@@ -89,6 +94,11 @@
 		035176042767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGroupVC+NavigationControllerDeligate.swift"; sourceTree = "<group>"; };
 		035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationOpener.swift; sourceTree = "<group>"; };
 		03531138278037EE00092ED0 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		0356022627C4072D00436A7F /* NewsLineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLineVC.swift; sourceTree = "<group>"; };
+		0356022B27C407E000436A7F /* NewsLineTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLineTVC.swift; sourceTree = "<group>"; };
+		0356022C27C407E000436A7F /* NewsLineTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsLineTVC.xib; sourceTree = "<group>"; };
+		0356022F27C40AFB00436A7F /* NewsLineVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsLineVC+DataSource.swift"; sourceTree = "<group>"; };
+		0356023127C40B0900436A7F /* NewsLineVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsLineVC+Delegate.swift"; sourceTree = "<group>"; };
 		037E700A278453C60093D88B /* NetworkServicesVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesVK.swift; sourceTree = "<group>"; };
 		03855042279B03EE00ABCB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseLoginVC.swift; sourceTree = "<group>"; };
@@ -145,6 +155,8 @@
 		030F630C2764D63C0069425F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				031AE0A0275CD7410036A9C3 /* LikeController */,
+				0356022827C4076F00436A7F /* NewsLineTV */,
 				03370C932756B13B0056B659 /* Cells */,
 				03BAC0D62753930900A34E9C /* TableView */,
 				035176062767D1BB0039CD04 /* CustomAnimationOpener.swift */,
@@ -234,7 +246,6 @@
 				033F1FB62741035C00C20077 /* SceneDelegate.swift */,
 				033F1FB82741035C00C20077 /* ViewController.swift */,
 				033F1FBA2741035C00C20077 /* Main.storyboard */,
-				031AE0A0275CD7410036A9C3 /* LikeController */,
 				03BAC0E5275399AD00A34E9C /* Model */,
 				030F630C2764D63C0069425F /* Custom */,
 				03BAC0D5275392DB00A34E9C /* Controllers */,
@@ -243,6 +254,25 @@
 				03C7106F27410AE80000159F /* Fonts */,
 			);
 			path = VKInterface;
+			sourceTree = "<group>";
+		};
+		0356022527C406F100436A7F /* NewsLine */ = {
+			isa = PBXGroup;
+			children = (
+				0356022627C4072D00436A7F /* NewsLineVC.swift */,
+				0356022F27C40AFB00436A7F /* NewsLineVC+DataSource.swift */,
+				0356023127C40B0900436A7F /* NewsLineVC+Delegate.swift */,
+			);
+			path = NewsLine;
+			sourceTree = "<group>";
+		};
+		0356022827C4076F00436A7F /* NewsLineTV */ = {
+			isa = PBXGroup;
+			children = (
+				0356022B27C407E000436A7F /* NewsLineTVC.swift */,
+				0356022C27C407E000436A7F /* NewsLineTVC.xib */,
+			);
+			path = NewsLineTV;
 			sourceTree = "<group>";
 		};
 		03855046279B08AE00ABCB53 /* FireBaseLoginVC */ = {
@@ -302,6 +332,7 @@
 		03BAC0D5275392DB00A34E9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0356022527C406F100436A7F /* NewsLine */,
 				039FCC5A2779FBE6007AD9D8 /* ObserverVC */,
 				0339BB112771F13000189098 /* SigletonVC */,
 				030F6309276137070069425F /* News */,
@@ -467,6 +498,7 @@
 				033F1FBE2741035C00C20077 /* Assets.xcassets in Resources */,
 				03C7106D27410AC20000159F /* VK Sans.ttf in Resources */,
 				03BAC0E22753940100A34E9C /* CustomTableViewCell.xib in Resources */,
+				0356022E27C407E000436A7F /* NewsLineTVC.xib in Resources */,
 				031AE0A6275CE8F00036A9C3 /* LikeController.xib in Resources */,
 				03370C972756B1660056B659 /* GalleryCell.xib in Resources */,
 				033F1FBC2741035C00C20077 /* Main.storyboard in Resources */,
@@ -527,6 +559,7 @@
 				03370CA02757ABF40056B659 /* UserGalleryBigPicture.swift in Sources */,
 				03BAC0E12753940100A34E9C /* CustomTableViewCell.swift in Sources */,
 				039FCC5C2779FBF8007AD9D8 /* ObserverVC.swift in Sources */,
+				0356022727C4072D00436A7F /* NewsLineVC.swift in Sources */,
 				03BAC0FB2753CE2D00A34E9C /* UserGroupVC+DataSource.swift in Sources */,
 				030F630B276137130069425F /* NewsViewController.swift in Sources */,
 				035176052767D0C40039CD04 /* UserGroupVC+NavigationControllerDeligate.swift in Sources */,
@@ -535,6 +568,7 @@
 				03BAC0D32753927B00A34E9C /* FriendsViewController.swift in Sources */,
 				03C0903E279B635A009D68BB /* UsersFBSingleton.swift in Sources */,
 				031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */,
+				0356023027C40AFB00436A7F /* NewsLineVC+DataSource.swift in Sources */,
 				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
@@ -551,6 +585,7 @@
 				03BAC0EF2753B99A00A34E9C /* AddFriendViewController.swift in Sources */,
 				03370CA22757AF270056B659 /* UserGalleryBigPictureVC+SourceData.swift in Sources */,
 				03370C992756B8EE0056B659 /* GalleryVC+UICollectionViewDelegateFlowLayout.swift in Sources */,
+				0356022D27C407E000436A7F /* NewsLineTVC.swift in Sources */,
 				031AE0A2275CD7670036A9C3 /* LikeController.swift in Sources */,
 				03370C9B2756BACE0056B659 /* GalleryVC+Delegate.swift in Sources */,
 				0339BB132771F15300189098 /* SingletonViewController.swift in Sources */,
@@ -562,6 +597,7 @@
 				03370C8D2756AE220056B659 /* GalleryViewController.swift in Sources */,
 				03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */,
 				033F1FB72741035C00C20077 /* SceneDelegate.swift in Sources */,
+				0356023227C40B0900436A7F /* NewsLineVC+Delegate.swift in Sources */,
 				039FCC5927760D2A007AD9D8 /* vkprintDataToConsole.swift in Sources */,
 				03BAC0E927539A4D00A34E9C /* Groups.swift in Sources */,
 				039FCC512775DA0F007AD9D8 /* VKLoginScreenVC.swift in Sources */,
