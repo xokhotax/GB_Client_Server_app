@@ -55,12 +55,12 @@ class NetworkServices {
     urlComponents.path = "/authorize"
     urlComponents.queryItems = [
       URLQueryItem(name: "client_id", value: "8034847"),
-      URLQueryItem(name: "scope", value: "262148"),
+      URLQueryItem(name: "scope", value: "wall,friends,groups"),
       URLQueryItem(name: "display", value: "mobile"),
       URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
       URLQueryItem(name: "response_type", value: "token"),
       URLQueryItem(name: "user_id", value: "userId"),
-      URLQueryItem(name: "v", value: "5.92")
+      URLQueryItem(name: "v", value: "5.131")
       
     ]
     let errorURL = URL(string: "https://oauth.vk.com/blank.html")!
@@ -68,7 +68,6 @@ class NetworkServices {
     let request = URLRequest(url: url)
     return request
   }
-  
   
   func vkGroupList(completion: @escaping (Result<[Groups], Error>) -> Void) {
     let path = "/method/groups.get"
@@ -172,4 +171,33 @@ class NetworkServices {
     vkPrintDataToConsole(urlComponents: urlComponents)
   }
   
+  func vkNewsFeed(_ completion: @escaping (Result<[News], Error>) -> Void ) {
+    
+    let path = "/method/newsfeed.get"
+    
+    let parameters = [
+      "access_token": token,
+      "owner_id": userId,
+      "filters": "post",
+      "v": version,
+      "source_ids": "friends"
+    ]
+    AF.request(host + path, parameters: parameters)
+      .validate()
+      .response { response in
+        switch response.result {
+          case .failure(let error):
+            completion(.failure(error))
+          case let .success(data):
+            do {
+              guard let data = data else { return }
+              let newsResponse = try JSONDecoder().decode(NewsResponse.self, from: data)
+              let news = newsResponse.response.items
+              completion(.success(news))
+            } catch {
+              completion(.failure(error))
+            }
+        }
+      }
+  }
 }

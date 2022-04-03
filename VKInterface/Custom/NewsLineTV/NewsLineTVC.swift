@@ -19,6 +19,9 @@ class NewsLineTVC: UITableViewCell {
   override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+  
+  func configure(news: News) {
     
+    newsText.text = String(describing: news.text.description)
+  }
 }

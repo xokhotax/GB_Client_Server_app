@@ -23,7 +23,7 @@ final class NewsViewController: UIViewController {
   @IBOutlet weak var groupSearchButton: UIButton!
   
   let networkServices = NetworkServices()
-  
+  let shared = Session()
   
   private func loadingAnimation(times: Int, counter: Int) {
     
@@ -124,6 +124,7 @@ final class NewsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     loadingAnimationKeyFrame(times: 5, counter: 0)
+    print(shared.token)
   }
   
   @IBAction func toSingletonView(_ sender: Any) {

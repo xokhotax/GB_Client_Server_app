@@ -37,6 +37,7 @@
 		0356022E27C407E000436A7F /* NewsLineTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0356022C27C407E000436A7F /* NewsLineTVC.xib */; };
 		0356023027C40AFB00436A7F /* NewsLineVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356022F27C40AFB00436A7F /* NewsLineVC+DataSource.swift */; };
 		0356023227C40B0900436A7F /* NewsLineVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356023127C40B0900436A7F /* NewsLineVC+Delegate.swift */; };
+		0356023427C4183800436A7F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356023327C4183800436A7F /* News.swift */; };
 		037E700B278453C60093D88B /* NetworkServicesVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E700A278453C60093D88B /* NetworkServicesVK.swift */; };
 		03855043279B03EE00ABCB53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03855042279B03EE00ABCB53 /* GoogleService-Info.plist */; };
 		03855045279B08A900ABCB53 /* FireBaseLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */; };
@@ -99,11 +100,12 @@
 		0356022C27C407E000436A7F /* NewsLineTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsLineTVC.xib; sourceTree = "<group>"; };
 		0356022F27C40AFB00436A7F /* NewsLineVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsLineVC+DataSource.swift"; sourceTree = "<group>"; };
 		0356023127C40B0900436A7F /* NewsLineVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsLineVC+Delegate.swift"; sourceTree = "<group>"; };
+		0356023327C4183800436A7F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		037E700A278453C60093D88B /* NetworkServicesVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesVK.swift; sourceTree = "<group>"; };
 		03855042279B03EE00ABCB53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03855044279B08A900ABCB53 /* FireBaseLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseLoginVC.swift; sourceTree = "<group>"; };
 		03855047279B371500ABCB53 /* UsersFireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFireBase.swift; sourceTree = "<group>"; };
-		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		039FCC502775DA0F007AD9D8 /* VKLoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginScreenVC.swift; sourceTree = "<group>"; };
 		039FCC532775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VKLoginVC+WebViewDelegate.swift"; sourceTree = "<group>"; };
 		039FCC5827760D2A007AD9D8 /* vkprintDataToConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vkprintDataToConsole.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		039FCC5B2779FBF8007AD9D8 /* ObserverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				03531138278037EE00092ED0 /* Users.swift */,
 				03855047279B371500ABCB53 /* UsersFireBase.swift */,
 				03C0903D279B635A009D68BB /* UsersFBSingleton.swift */,
+				0356023327C4183800436A7F /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
+				0356023427C4183800436A7F /* News.swift in Sources */,
 				03BAC0E7275399C500A34E9C /* Friends.swift in Sources */,
 				039FCC542775DDE5007AD9D8 /* VKLoginVC+WebViewDelegate.swift in Sources */,
 				03BAC0F52753CD5E00A34E9C /* UserGroupViewController.swift in Sources */,
