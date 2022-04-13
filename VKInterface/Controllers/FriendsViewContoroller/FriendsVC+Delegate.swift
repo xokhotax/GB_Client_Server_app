@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 extension FriendsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView,
@@ -22,10 +23,18 @@ extension FriendsViewController: UITableViewDelegate {
                                               message: "Подтвердите удаление пользователя",
                                               preferredStyle: .actionSheet)
       
-      let actionYes = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
+      let actionYes = UIAlertAction(title: "Да", style: .default) {[ weak self ] _ in
         guard let self = self else { return }
-        self.friendsArray.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        let friend = self.friend?[indexPath.row]
+        do {
+          let realm = try? Realm()
+          guard let friend = friend else {return}
+          try realm?.write({
+            realm?.delete(friend)
+          })
+        } catch {
+          print(error)
+        }
       }
       alertController.addAction(actionYes)
       let actionNo = UIAlertAction (title: "Нет", style: .cancel, handler: nil)
@@ -39,17 +48,14 @@ extension FriendsViewController: UITableViewDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == toGallerySeague,
-       let friendsFotoArray = sender as? [String],
-       let destination = segue.destination as? GalleryViewController {
-      destination.sourceArray = friendsFotoArray
+       let pickedCell = sender as? CustomTableViewCell,
+       let cellIndexPath = tableView.indexPath(for: pickedCell),
+    let galleryViewController = segue.destination as? GalleryViewController {
+      let choosedFriend = friend?[cellIndexPath.item]
+      guard let choosedFriend = choosedFriend else { return }
+      
+      galleryViewController.choosedFriend = choosedFriend
+      Session.shared.friendId = choosedFriend 
     }
   }
-//
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    if let friendsFotoArray = friendsArray[indexPath.item].photoGallery {
-//      performSegue(withIdentifier: toGallerySeague, sender: friendsFotoArray)
-//    }
-//  }
-  
-  
 }

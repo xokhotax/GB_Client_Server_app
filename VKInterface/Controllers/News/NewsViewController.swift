@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
+import FirebaseAuth
 
-class NewsViewController: UIViewController {
+
+final class NewsViewController: UIViewController {
   
   @IBOutlet weak var firstItem: UIView!
   @IBOutlet weak var firstItemCenter: UIView!
@@ -15,8 +18,14 @@ class NewsViewController: UIViewController {
   @IBOutlet weak var secondItemCenter: UIView!
   @IBOutlet weak var thirdItem: UIView!
   @IBOutlet weak var thirdItemCenter: UIView!
+  @IBOutlet weak var singletonButton: UIButton!
+  @IBOutlet weak var groupSearch: UITextField!
+  @IBOutlet weak var groupSearchButton: UIButton!
   
-  func loadingAnimation(times: Int, counter: Int) {
+  let networkServices = NetworkServices()
+  let shared = Session()
+  
+  private func loadingAnimation(times: Int, counter: Int) {
     
     let timeInteval: Double = 1
     
@@ -67,7 +76,7 @@ class NewsViewController: UIViewController {
     }
   }
   
-  func loadingAnimationKeyFrame(times: Int, counter: Int) {
+  private func loadingAnimationKeyFrame(times: Int, counter: Int) {
     let durationAnimation: CGFloat = 3
     firstItem.alpha = 0
     secondItem.alpha = 0
@@ -110,9 +119,30 @@ class NewsViewController: UIViewController {
     }
   }
   
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-//    loadingAnimation(times: 5, counter: 0)
     loadingAnimationKeyFrame(times: 5, counter: 0)
+    print(shared.token)
+  }
+  
+  @IBAction func toSingletonView(_ sender: Any) {
+  }
+  
+  @IBAction func groupSearchButton(_ sender: Any) {
+    networkServices.vkGroupSearch(searchText: groupSearch.text ?? "")
+  }
+  
+  @IBAction func toObserverPatternVC(_ sender: Any) {
+  }
+  
+  
+  @IBAction func logOut(_ sender: Any) {
+    do {
+      try Auth.auth().signOut()
+    } catch let (error) {
+      print("\(error)")
+    }
   }
 }

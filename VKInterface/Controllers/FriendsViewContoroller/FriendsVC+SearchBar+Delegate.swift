@@ -7,15 +7,18 @@
 
 import UIKit
 
-extension FriendsViewController: UISearchBarDelegate{
+
+extension FriendsViewController: UISearchBarDelegate {
+  
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+    
     if searchText .isEmpty{
-      friendsArray = sourceFriendsArray
+     friendsArray = sourceArray
     } else {
-      friendsArray = sourceFriendsArray.filter({ friendItem in
-        friendItem.name.lowercased().contains(searchText.lowercased())
+      self.friendsArray = friendsArray.filter({ friendItem in
+        friendItem.firstName.lowercased().contains(searchText.lowercased())
       })
     }
-    tableView.reloadData()
+    self.tableView.reloadData()
   }
 }

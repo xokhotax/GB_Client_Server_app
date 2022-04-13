@@ -10,31 +10,24 @@ import UIKit
 extension FriendsViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return friendsArray.count
+    return friend?.count ?? 1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentificator,
-                                                   for: indexPath) as? CustomTableViewCell else {return UITableViewCell() }
-  
-    cell.configure(friends: friendsArray[indexPath.row])
-    cell.delegate = self
+                                                   for: indexPath) as? CustomTableViewCell,
+          let friends = friend?[indexPath.row] else { return UITableViewCell() }
+    cell.configure(friend: friends)
+        cell.delegate = self
     
     return cell
-  } 
-  
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
   }
 }
 
 extension FriendsViewController: CustomTableViewCellDelegate {
-  func pressedPicture(friend: Friends) {
-    if let friendsFotoArray = friend.photoGallery  {
-         performSegue(withIdentifier: toGallerySeague, sender: friendsFotoArray)
-       }
+  func pressedPicture(choosedFriend: Friends) {
+    performSegue(withIdentifier: toGallerySeague, sender: choosedFriend)
+    
   }
-  
-  
 }

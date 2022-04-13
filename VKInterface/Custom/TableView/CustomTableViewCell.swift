@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 protocol CustomTableViewCellDelegate: AnyObject {
-  func pressedPicture(friend: Friends)
+  func pressedPicture(choosedFriend: Friends)
 }
 
-class CustomTableViewCell: UITableViewCell {
+final class CustomTableViewCell: UITableViewCell {
   
-  let blankAvatar = UIImage(named: "blankAvatar")
+  private let blankAvatar = UIImage(named: "blankAvatar")
   
   @IBOutlet weak var customNameField: UILabel!
   @IBOutlet weak var customAvatar: UIImageView!
@@ -22,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
   @IBOutlet weak var ContentView: UIView!
   @IBOutlet weak var customCellButton: UIButton!
   
-  weak var  delegate: CustomTableViewCellDelegate?
+  weak var delegate: CustomTableViewCellDelegate?
   
   var choosedFriend: Friends?
   
@@ -36,10 +38,10 @@ class CustomTableViewCell: UITableViewCell {
     super.awakeFromNib()
   }
   
-  func configure(friends: Friends){
+  func configure(friend: Friends) {
     
     customAvatar.image = blankAvatar
-    self.choosedFriend = friends
+    self.choosedFriend = friend
     guard let customAvatarHeight = customAvatar.image?.cgImage?.height else { return }
     customAvatar.layer.cornerRadius = CGFloat (customAvatarHeight / 4)
     customTableLayout.layer.cornerRadius = CGFloat (customAvatarHeight / 4)
@@ -47,23 +49,13 @@ class CustomTableViewCell: UITableViewCell {
     customTableLayout.layer.shadowRadius = 10
     customTableLayout.layer.shadowOffset = CGSize (width: 10, height: 10)
     customTableLayout.layer.shadowOpacity = 0.25
-    print (customAvatarHeight)
-    
-    if let avatar = friends.avatar {
-      customAvatar.image = UIImage(named: avatar)
-    }
-    
-    if let surname = friends.surname {
-      customNameField.text = "\(friends.name) \(surname)"
-    } else {
-      customNameField.text = friends.name
-    }
+
+    customNameField.text = String(describing: (friend.firstName + " " + friend.lastName))
+    customAvatar.kf.setImage(with:friend.friendAvatar)
   }
   
   func configure(groups: Groups){
-    customAvatar.image = blankAvatar
-    guard let avatar = groups.avatar else {return customAvatar.image = blankAvatar}
-    customAvatar.image = UIImage(named: avatar)
+    customAvatar.kf.setImage(with: groups.avatar)
     customNameField.text = groups.name
     customAvatarButton.alpha = 0
   }
@@ -73,7 +65,7 @@ class CustomTableViewCell: UITableViewCell {
     UIView.animate(withDuration: 2,
                    animations: {[weak self] in
       guard let middleXVAlue = self?.customAvatar.frame.midX,
-              let middleYValue =  self?.customAvatar.frame.midY else {return}
+            let middleYValue = self?.customAvatar.frame.midY else { return }
       self?.customAvatar.frame = CGRect(x: middleXVAlue,
                                         y: middleYValue,
                                         width: 0,
@@ -81,20 +73,23 @@ class CustomTableViewCell: UITableViewCell {
     }, completion: { isSuccess in
       if isSuccess {
         UIView.animate(withDuration: 3,
-                       animations: {[weak self] in
-          guard let self = self else {return}
+                       animations: { [ weak self ] in
+          guard let self = self else { return }
           self.customAvatar.frame = startFrame
-        }, completion: { [weak self] isSuccess in
+        }, completion: { [ weak self ] isSuccess in
           if isSuccess, let self = self,
-             let friend = self.choosedFriend {
-            self.delegate?.pressedPicture(friend: friend)
+             let choosedFriend = self.choosedFriend {
+            self.delegate?.pressedPicture(choosedFriend: choosedFriend)
+            Session.shared.friendId = choosedFriend.friendId
           }
         })
       }
     })
   }
+  
   @IBAction func customCellButton(_ sender: Any) {
-    guard let choosedFriend = self.choosedFriend else {return}
-    self.delegate?.pressedPicture(friend: choosedFriend)
+    guard let choosedFriend = self.choosedFriend else { return }
+    self.delegate?.pressedPicture(choosedFriend: choosedFriend)
+    Session.shared.friendId = choosedFriend.friendId
   }
 }

@@ -7,39 +7,9 @@
 
 import UIKit
 
-//MARK: GameWithShadows
-
-//class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
-//  func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-//    return 3
-//  }
-//
-//  func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-//    guard let sourceController = transitionContext.viewController(forKey: .from),
-//          let destinationController = transitionContext.viewController(forKey: .to)
-//    else {return}
-//
-//    let containerFrame = transitionContext.containerView.frame
-//    transitionContext.containerView.addSubview(destinationController.view)
-//    let destinationControllerViewFrame = destinationController.view.frame
-//    destinationController.view.frame  = CGRect(x: 0, y: 0, width: 0, height: 0)
-//
-//    UIView.animate(withDuration: self.transitionDuration(using: transitionContext)  / 2) {
-//      sourceController.view.alpha = 0
-//    } completion: { _ in
-//      UIView.animate(withDuration: self.transitionDuration(using: transitionContext)  / 2) {
-//        destinationController.view.frame = destinationControllerViewFrame
-//      } completion: { isTrue in
-//        transitionContext.completeTransition(isTrue)
-//        sourceController.view.alpha = 1
-//      }
-//    }
-//  }
-//}
-
 //MARK: Rotation
 
-class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
+final class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
     return 3
   }
@@ -49,7 +19,6 @@ class CustomAnimationOpener: NSObject, UIViewControllerAnimatedTransitioning  {
           let destinationController = transitionContext.viewController(forKey: .to)
     else {return}
     
-    //    let containerFrame = transitionContext.containerView.frame
     transitionContext.containerView.addSubview(destinationController.view)
     let destinationControllerViewFrame = destinationController.view.frame
     let destinationControllerViewBounds = destinationController.view.bounds
