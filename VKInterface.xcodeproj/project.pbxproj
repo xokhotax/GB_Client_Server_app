@@ -64,6 +64,7 @@
 		03C7106D27410AC20000159F /* VK Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C7106C27410AC20000159F /* VK Sans.ttf */; };
 		03D84E9C2794411D00A50657 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9B2794411D00A50657 /* RealmServices.swift */; };
 		03D84E9E2794418200A50657 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D84E9D2794418200A50657 /* Photo.swift */; };
+		03DAA6632809CDCD00122035 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DAA6622809CDCD00122035 /* UIColor.swift */; };
 		03F0462527612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */; };
 		B21FC6407910E8547B0A31B9 /* Pods_VKInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,7 @@
 		03C7106C27410AC20000159F /* VK Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VK Sans.ttf"; sourceTree = "<group>"; };
 		03D84E9B2794411D00A50657 /* RealmServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
 		03D84E9D2794418200A50657 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		03DAA6622809CDCD00122035 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		03F0462427612527000DBC23 /* FriendsVC+SearchBar+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendsVC+SearchBar+Delegate.swift"; sourceTree = "<group>"; };
 		550884F0547CBF9BFE06C9A5 /* Pods-VKInterface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKInterface.release.xcconfig"; path = "Target Support Files/Pods-VKInterface/Pods-VKInterface.release.xcconfig"; sourceTree = "<group>"; };
 		60F8B0357A991A878D61B2B3 /* Pods_VKInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				031AE09E275B9EE90036A9C3 /* UIImage+Resize.swift */,
+				03DAA6622809CDCD00122035 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				03C0903E279B635A009D68BB /* UsersFBSingleton.swift in Sources */,
 				031AE0AA275EA28B0036A9C3 /* Constants.swift in Sources */,
 				0356023027C40AFB00436A7F /* NewsLineVC+DataSource.swift in Sources */,
+				03DAA6632809CDCD00122035 /* UIColor.swift in Sources */,
 				031AE09F275B9EE90036A9C3 /* UIImage+Resize.swift in Sources */,
 				03370C922756AF990056B659 /* GalleryVC+SourceData.swift in Sources */,
 				03BAC1012753D1D000A34E9C /* AllGroupsVC+Deligate.swift in Sources */,
@@ -688,6 +692,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -742,6 +747,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -754,7 +760,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2S2R367ACQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKInterface/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -772,7 +778,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -784,7 +790,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2S2R367ACQ;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKInterface/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -802,7 +808,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

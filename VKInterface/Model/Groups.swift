@@ -25,7 +25,6 @@ class Groups: Object {
     return "id"
   }
   
-  
   convenience init(json: SwiftyJSON.JSON) {
     self.init()
     

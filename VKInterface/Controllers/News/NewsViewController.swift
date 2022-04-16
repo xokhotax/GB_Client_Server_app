@@ -118,13 +118,17 @@ final class NewsViewController: UIViewController {
     } completion: { _ in
     }
   }
-  
-  
+    
+    private func buttonColors() {
+        self.singletonButton.tintColor = .customOrange
+        self.groupSearchButton.tintColor = .custonmGreyRed
+    }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     loadingAnimationKeyFrame(times: 5, counter: 0)
     print(shared.token)
+      buttonColors()
   }
   
   @IBAction func toSingletonView(_ sender: Any) {
@@ -136,7 +140,6 @@ final class NewsViewController: UIViewController {
   
   @IBAction func toObserverPatternVC(_ sender: Any) {
   }
-  
   
   @IBAction func logOut(_ sender: Any) {
     do {
