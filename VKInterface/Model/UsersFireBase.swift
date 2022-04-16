@@ -16,5 +16,3 @@ struct UserFireBase {
 }
 
 extension UserFireBase: Codable {}
-
- 
